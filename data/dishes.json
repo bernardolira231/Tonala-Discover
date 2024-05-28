@@ -1,0 +1,113 @@
+[
+    {
+      "id": 1,
+      "name": "Birria de Chivo",
+      "ingredients": [
+        "Goat meat",
+        "Dried chiles",
+        "Spices (cumin, oregano, cloves)",
+        "Garlic",
+        "Onion",
+        "Vinegar"
+      ],
+      "description": "A traditional dish from Tonalá, Jalisco, cooked in earth ovens, with goat meat marinated with chiles and spices."
+    },
+    {
+      "id": 2,
+      "name": "Corn Tamale",
+      "ingredients": [
+        "Tender corn",
+        "Sugar",
+        "Butter",
+        "Corn husks"
+      ],
+      "description": "A sweet tamale made from tender corn, served hot and often accompanied by cream or condensed milk."
+    },
+    {
+      "id": 3,
+      "name": "Cazuela Tamales",
+      "ingredients": [
+        "Corn dough",
+        "Pork or chicken",
+        "Chiles",
+        "Spices",
+        "Banana leaves"
+      ],
+      "description": "Tamales cooked in a clay pot, giving them a special flavor and different texture."
+    },
+    {
+      "id": 4,
+      "name": "Beef Cracklings",
+      "ingredients": [
+        "Beef skin",
+        "Salt",
+        "Oil"
+      ],
+      "description": "Cracklings made from beef skin, served as a snack or in tacos."
+    },
+    {
+      "id": 5,
+      "name": "Basket Tacos",
+      "ingredients": [
+        "Tortillas",
+        "Fillings (potato, cracklings, beans, adobo)",
+        "Oil"
+      ],
+      "description": "Tacos placed in a basket to keep them warm, with traditional fillings like potato, cracklings, beans, and adobo."
+    },
+    {
+      "id": 6,
+      "name": "Wild Boar Broth",
+      "ingredients": [
+        "Wild boar meat",
+        "Chiles",
+        "Spices",
+        "Onion",
+        "Garlic"
+      ],
+      "description": "An exotic dish made from wild boar meat cooked in a broth with chiles and spices."
+    },
+    {
+      "id": 7,
+      "name": "Pumpkin Stem Soup",
+      "ingredients": [
+        "Pumpkin stems",
+        "Pumpkin flowers",
+        "Chicken broth",
+        "Onion",
+        "Garlic"
+      ],
+      "description": "Soup made with tender pumpkin stems and pumpkin flowers, creating a nutritious and flavorful dish."
+    },
+    {
+      "id": 8,
+      "name": "Tequila and Mezcal",
+      "ingredients": [
+        "Agave"
+      ],
+      "description": "Traditional drinks from Jalisco, very popular in Tonalá, enjoyed alone or as part of cocktails."
+    },
+    {
+      "id": 9,
+      "name": "Artisanal Ice Creams",
+      "ingredients": [
+        "Fruits (mango, guava, lime)",
+        "Sugar",
+        "Water"
+      ],
+      "description": "Ice creams with traditional flavors, ideal for cooling down on a hot day."
+    },
+    {
+      "id": 10,
+      "name": "Tapatian Enchiladas",
+      "ingredients": [
+        "Tortillas",
+        "Chicken",
+        "Chile sauce",
+        "Cream",
+        "Cheese"
+      ],
+      "description": "Tortillas filled with chicken, covered with chile sauce, cream, and cheese, a local variant of a classic dish."
+    }
+  ]
+  
