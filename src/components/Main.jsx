@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     textAlign: "center",
     marginVertical: 10,
-    color: "#E0E0E0",
+    color: "#202020",
   },
   bg: {
-    backgroundColor: "#00131f",
+    backgroundColor: "#f0f0f0",
     flex: 1,
   },
   scrollViewContent: {
