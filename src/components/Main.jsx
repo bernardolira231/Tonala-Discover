@@ -9,10 +9,10 @@ const Main = () => {
     <SafeAreaProvider>
       <SafeAreaView style={styles.bg}>
         <ScrollView contentContainerStyle={styles.scrollViewContent}>
-          <Text style={styles.h1}>Dishes</Text>
+          <Text style={styles.h1}>Dishes</Text> 
           <Dishes />
+          <StatusBar style="light" />
         </ScrollView>
-        <StatusBar style="light" />
       </SafeAreaView>
     </SafeAreaProvider>
   );
