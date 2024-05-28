@@ -1,113 +1,122 @@
 [
-    {
+  {
       "id": 1,
       "name": "Birria de Chivo",
       "ingredients": [
-        "Goat meat",
-        "Dried chiles",
-        "Spices (cumin, oregano, cloves)",
-        "Garlic",
-        "Onion",
-        "Vinegar"
+          "Goat meat",
+          "Dried chiles",
+          "Spices (cumin, oregano, cloves)",
+          "Garlic",
+          "Onion",
+          "Vinegar"
       ],
-      "description": "A traditional dish from Tonalá, Jalisco, cooked in earth ovens, with goat meat marinated with chiles and spices."
-    },
-    {
+      "description": "A traditional dish from Tonalá, Jalisco, cooked in earth ovens, with goat meat marinated with chiles and spices.",
+      "image": "https://cdn7.kiwilimon.com/brightcove/10248/640x640/10248.jpg.webp"
+  },
+  {
       "id": 2,
       "name": "Corn Tamale",
       "ingredients": [
-        "Tender corn",
-        "Sugar",
-        "Butter",
-        "Corn husks"
+          "Tender corn",
+          "Sugar",
+          "Butter",
+          "Corn husks"
       ],
-      "description": "A sweet tamale made from tender corn, served hot and often accompanied by cream or condensed milk."
-    },
-    {
+      "description": "A sweet tamale made from tender corn, served hot and often accompanied by cream or condensed milk.",
+      "image": "https://www.recetasnestle.com.mx/sites/default/files/srh_recipes/69cbdff610ad0e8487e360ceadd99d09.jpg"
+  },
+  {
       "id": 3,
       "name": "Cazuela Tamales",
       "ingredients": [
-        "Corn dough",
-        "Pork or chicken",
-        "Chiles",
-        "Spices",
-        "Banana leaves"
+          "Corn dough",
+          "Pork or chicken",
+          "Chiles",
+          "Spices",
+          "Banana leaves"
       ],
-      "description": "Tamales cooked in a clay pot, giving them a special flavor and different texture."
-    },
-    {
+      "description": "Tamales cooked in a clay pot, giving them a special flavor and different texture.",
+      "image": "https://assets.elgourmet.com/wp-content/uploads/2024/01/Tamal-de-cazuela-5-1.jpg"
+  },
+  {
       "id": 4,
       "name": "Beef Cracklings",
       "ingredients": [
-        "Beef skin",
-        "Salt",
-        "Oil"
+          "Beef skin",
+          "Salt",
+          "Oil"
       ],
-      "description": "Cracklings made from beef skin, served as a snack or in tacos."
-    },
-    {
+      "description": "Cracklings made from beef skin, served as a snack or in tacos.",
+      "image": "https://lirp.cdn-website.com/7ed979aa/dms3rep/multi/opt/436310-5213aaf4-640w.jpg"
+  },
+  {
       "id": 5,
       "name": "Basket Tacos",
       "ingredients": [
-        "Tortillas",
-        "Fillings (potato, cracklings, beans, adobo)",
-        "Oil"
+          "Tortillas",
+          "Fillings (potato, cracklings, beans, adobo)",
+          "Oil"
       ],
-      "description": "Tacos placed in a basket to keep them warm, with traditional fillings like potato, cracklings, beans, and adobo."
-    },
-    {
+      "description": "Tacos placed in a basket to keep them warm, with traditional fillings like potato, cracklings, beans, and adobo.",
+      "image": "https://www.cocinavital.mx/wp-content/uploads/2022/05/receta-tacos-de-canasta.jpg"
+  },
+  {
       "id": 6,
       "name": "Wild Boar Broth",
       "ingredients": [
-        "Wild boar meat",
-        "Chiles",
-        "Spices",
-        "Onion",
-        "Garlic"
+          "Wild boar meat",
+          "Chiles",
+          "Spices",
+          "Onion",
+          "Garlic"
       ],
-      "description": "An exotic dish made from wild boar meat cooked in a broth with chiles and spices."
-    },
-    {
+      "description": "An exotic dish made from wild boar meat cooked in a broth with chiles and spices.",
+      "image": "https://www.abc.es/xlsemanal/wp-content/uploads/sites/5/2023/12/civet-de-jabali-receta-martin-berasategui.jpg"
+  },
+  {
       "id": 7,
       "name": "Pumpkin Stem Soup",
       "ingredients": [
-        "Pumpkin stems",
-        "Pumpkin flowers",
-        "Chicken broth",
-        "Onion",
-        "Garlic"
+          "Pumpkin stems",
+          "Pumpkin flowers",
+          "Chicken broth",
+          "Onion",
+          "Garlic"
       ],
-      "description": "Soup made with tender pumpkin stems and pumpkin flowers, creating a nutritious and flavorful dish."
-    },
-    {
+      "description": "Soup made with tender pumpkin stems and pumpkin flowers, creating a nutritious and flavorful dish.",
+      "image": "https://i.blogs.es/617df6/650_1200-1/840_560.jpg"
+  },
+  {
       "id": 8,
       "name": "Tequila and Mezcal",
       "ingredients": [
-        "Agave"
+          "Agave"
       ],
-      "description": "Traditional drinks from Jalisco, very popular in Tonalá, enjoyed alone or as part of cocktails."
-    },
-    {
+      "description": "Traditional drinks from Jalisco, very popular in Tonalá, enjoyed alone or as part of cocktails.",
+      "image": "https://thefoodtech.com/wp-content/uploads/2023/07/trago-tequila-limones-mesa-828x548.jpg"
+  },
+  {
       "id": 9,
       "name": "Artisanal Ice Creams",
       "ingredients": [
-        "Fruits (mango, guava, lime)",
-        "Sugar",
-        "Water"
+          "Fruits (mango, guava, lime)",
+          "Sugar",
+          "Water"
       ],
-      "description": "Ice creams with traditional flavors, ideal for cooling down on a hot day."
-    },
-    {
+      "description": "Ice creams with traditional flavors, ideal for cooling down on a hot day.",
+      "image": "https://eldiariodesonora.com.mx/uploads/images/202404/image_750x_6627ee724a562.webp"
+  },
+  {
       "id": 10,
       "name": "Tapatian Enchiladas",
       "ingredients": [
-        "Tortillas",
-        "Chicken",
-        "Chile sauce",
-        "Cream",
-        "Cheese"
+          "Tortillas",
+          "Chicken",
+          "Chile sauce",
+          "Cream",
+          "Cheese"
       ],
-      "description": "Tortillas filled with chicken, covered with chile sauce, cream, and cheese, a local variant of a classic dish."
-    }
-  ]
-  
+      "description": "Tortillas filled with chicken, covered with chile sauce, cream, and cheese, a local variant of a classic dish.",
+      "image": "https://mamaconeja.com/resources/receta/48/08wVbU_37.jpg"
+  }
+]
