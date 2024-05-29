@@ -4,35 +4,24 @@ import { Text, StyleSheet, ScrollView } from "react-native";
 import Dishes from "./Dishes.jsx";
 import { StatusBar } from "expo-status-bar";
 
-const Main = () => {
+const MainDishes = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.bg}>
-        <ScrollView contentContainerStyle={styles.scrollViewContent}>
-          <Text style={styles.h1}>Dishes</Text> 
-          <Dishes />
-          <StatusBar style="light" />
-        </ScrollView>
+        <Dishes />
+        <StatusBar style="dark" />
       </SafeAreaView>
     </SafeAreaProvider>
   );
 };
 
 const styles = StyleSheet.create({
-  h1: {
-    fontSize: 24,
-    fontWeight: "700",
-    textAlign: "center",
-    marginVertical: 10,
-    color: "#202020",
-  },
   bg: {
+    paddingVertical: 10,
     backgroundColor: "#f0f0f0",
     flex: 1,
   },
-  scrollViewContent: {
-    paddingVertical: 10,
-  },
+  scrollViewContent: {},
 });
 
-export default Main;
+export default MainDishes;
