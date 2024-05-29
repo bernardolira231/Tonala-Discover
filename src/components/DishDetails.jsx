@@ -1,10 +1,9 @@
-// src/DishDetails.jsx
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import StyledText from "./StyledText.jsx";
 
 const DishDetails = ({ route }) => {
-  const { name, description, image, ingredients } = route.params;
+  const { id, name, description, image, ingredients } = route.params;
 
   return (
     <View style={styles.container}>

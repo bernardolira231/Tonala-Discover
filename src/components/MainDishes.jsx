@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import { Text, StyleSheet, ScrollView } from "react-native";
+import { StyleSheet } from "react-native";
 import Dishes from "./Dishes.jsx";
 import { StatusBar } from "expo-status-bar";
 
