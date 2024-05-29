@@ -1,15 +1,34 @@
 import React from "react";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Other from "./src/components/OtherScreen";
 import MainDishes from "./src/components/MainDishes";
 import HomePage from "./src/components/Home";
 import DishDetails from "./src/components/DishDetails";
+import CameraScreen from "./src/components/CameraScreen"; 
 
 const Tab = createBottomTabNavigator();
 const InfoStack = createStackNavigator();
+const HomeStack = createStackNavigator();
+
+function HomeStackScreen() {
+  return (
+    <HomeStack.Navigator initialRouteName="HomeStack">
+      <HomeStack.Screen
+        name="HomeStack"
+        component={HomePage}
+        options={{ headerShown: false }}
+      />
+      <HomeStack.Screen
+        name="DishesStack"
+        component={MainDishes}
+        options={{ headerShown: false }}
+      />
+    </HomeStack.Navigator>
+  );
+}
 
 function MyStack() {
   return (
@@ -28,15 +47,52 @@ function MyStack() {
   );
 }
 
+const CameraButton = ({ onPress }) => {
+  return (
+    <TouchableOpacity onPress={onPress} style={styles.cameraButton}>
+      <MaterialCommunityIcons name="camera" color="#fff" size={30} />
+    </TouchableOpacity>
+  );
+};
+
 function MyTabs() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          position: "absolute",
+          bottom: 25,
+          left: 20,
+          right: 20,
+          elevation: 0,
+          backgroundColor: "#ffffff",
+          borderRadius: 15,
+          height: 90,
+          ...styles.shadow,
+        },
+      }}
+    >
       <Tab.Screen
         name="Home"
-        component={HomePage}
+        component={HomeStackScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="home" size={size} color={color} />
+          ),
+          headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="Camera"
+        component={CameraScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <View style={styles.cameraIconContainer}>
+              <CameraButton
+                onPress={() => console.log("Camera Button Pressed")}
+              />
+            </View>
           ),
           headerShown: false,
         }}
@@ -55,7 +111,6 @@ function MyTabs() {
           headerShown: false,
         }}
       />
-      <Tab.Screen name="Other" component={Other} />
     </Tab.Navigator>
   );
 }
@@ -67,3 +122,38 @@ export default function Navigation() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  shadow: {
+    shadowColor: "#7F5DF0",
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.5,
+    elevation: 5,
+  },
+  cameraButton: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: 70,
+    height: 70,
+    backgroundColor: "#FF6347",
+    borderRadius: 35,
+    position: "absolute",
+    top: -30,
+    shadowColor: "#7F5DF0",
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.5,
+    elevation: 5,
+  },
+  cameraIconContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});

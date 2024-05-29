@@ -1,16 +1,18 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
+import TryCarousel from "./TryCarousel.jsx";
+import dishes from "../../data/dishes.json";
 
 const Home = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.bg}>
-        <View>
-          <Text>HomePage</Text>
-        </View>
-        <StatusBar style="dark" />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <TryCarousel header="Dishes" data={dishes} screen="Dishes" />
+        </ScrollView>
+        <StatusBar style="auto" />
       </SafeAreaView>
     </SafeAreaProvider>
   );
