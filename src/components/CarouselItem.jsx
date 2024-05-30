@@ -5,7 +5,7 @@ import {
   Text,
   TouchableWithoutFeedback,
 } from "react-native";
-import { styles } from "./StyledCarouselItem";
+import { styles } from "../styles/StyledCarouselItem";
 import { useNavigation } from "@react-navigation/native";
 
 const CarouselItem = (props) => {

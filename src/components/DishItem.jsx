@@ -1,6 +1,6 @@
 import React from "react";
 import { View, ImageBackground, Text, TouchableOpacity } from "react-native";
-import { styles } from "./StyledDishesCard";
+import { styles } from "../styles/StyledDishesCard";
 import { useNavigation } from "@react-navigation/native";
 
 const DishItem = (props) => {

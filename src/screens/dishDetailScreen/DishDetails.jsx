@@ -6,7 +6,7 @@ import {
   ImageBackground,
   ScrollView,
 } from "react-native";
-import StyledText from "../../components/StyledText";
+import StyledText from "../../styles/StyledText";
 
 const DishDetails = ({ route }) => {
   const { name, description, image, ingredients } = route.params;
