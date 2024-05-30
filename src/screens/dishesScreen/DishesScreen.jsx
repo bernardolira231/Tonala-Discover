@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet } from "react-native";
-import Dishes from "./Dishes.jsx";
+import Dishes from "../../components/Dishes.jsx";
 import { StatusBar } from "expo-status-bar";
 
 const MainDishes = () => {
