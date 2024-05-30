@@ -1,5 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  ScrollView,
+} from "react-native";
 import StyledText from "./StyledText.jsx";
 
 const DishDetails = ({ route }) => {
@@ -7,18 +13,28 @@ const DishDetails = ({ route }) => {
 
   return (
     <ScrollView style={styles.container}>
-      <Image source={{ uri: image }} style={styles.image} />
-      <View style={styles.textContainer}>
-        <StyledText fontSize={"title"} fontWeight={"bold"} style={styles.title}>
-          {name}
-        </StyledText>
-        <StyledText style={styles.description}>{description}</StyledText>
-        <View style={styles.ingredientsContainer}>
-          <StyledText style={styles.ingredientsTitle}>Ingredients:</StyledText>
-          <StyledText style={styles.ingredients}>
-            {ingredients.join(", ")}
+      <View style={styles.background}>
+        <View style={styles.textOverlay}>
+          <StyledText
+            fontSize={"title"}
+            fontWeight={"bold"}
+            style={styles.title}
+          >
+            {name}
           </StyledText>
+          <StyledText style={styles.description}>{description}</StyledText>
+          <View style={styles.ingredientsContainer}>
+            <StyledText style={styles.ingredientsTitle}>
+              Ingredients:
+            </StyledText>
+            <StyledText style={styles.ingredients}>
+              {ingredients.join(", ")}
+            </StyledText>
+          </View>
         </View>
+        <ImageBackground source={{ uri: image }} style={styles.image}>
+          <View style={styles.imageOverlay} />
+        </ImageBackground>
       </View>
     </ScrollView>
   );
@@ -28,44 +44,56 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#f8f8f8",
+    padding: 10,
   },
-  image: {
-    width: "100%",
-    height: 250,
-  },
-  textContainer: {
+  background: {
+    flex: 1,
+    backgroundColor: "#FFA726",
+    borderRadius: 100,
+    overflow: "hidden",
     padding: 20,
-    backgroundColor: "#fff",
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    marginTop: -20,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
-    elevation: 5,
+    marginTop: 100,
+  },
+  textOverlay: {
+    flex: 1,
+    padding: 20,
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     fontSize: 24,
-    color: "#333",
+    color: "#fff",
+    textAlign: "center",
+    marginVertical: 10,
   },
   description: {
     fontSize: 16,
-    color: "#666",
+    color: "#fff",
+    textAlign: "center",
     marginVertical: 10,
-    lineHeight: 22,
   },
   ingredientsContainer: {
     marginTop: 10,
+    alignItems: "center",
   },
   ingredientsTitle: {
     fontSize: 16,
-    color: "#333",
+    color: "#fff",
     marginBottom: 5,
   },
   ingredients: {
     fontSize: 14,
-    color: "#777",
+    color: "#fff",
+    textAlign: "center",
+  },
+  image: {
+    width: "100%",
+    height: 300,
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+  },
+  imageOverlay: {
+    ...StyleSheet.absoluteFillObject,
   },
 });
 

@@ -17,7 +17,7 @@ const CarouselItem = (props) => {
           id: props.id,
           name: props.name,
           description: props.description,
-          image: props.image,
+          image: props.image2,
           ingredients: props.ingredients,
         })
       }
