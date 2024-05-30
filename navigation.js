@@ -7,7 +7,8 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import MainDishes from "./src/components/MainDishes";
 import HomePage from "./src/components/Home";
 import DishDetails from "./src/components/DishDetails";
-import CameraScreen from "./src/components/CameraScreen"; 
+import CameraScreen from "./src/components/CameraScreen";
+import CarouselItem from "./src/components/CarouselItem";
 
 const Tab = createBottomTabNavigator();
 const InfoStack = createStackNavigator();
@@ -24,6 +25,11 @@ function HomeStackScreen() {
       <HomeStack.Screen
         name="DishesStack"
         component={MainDishes}
+        options={{ headerShown: false }}
+      />
+      <HomeStack.Screen
+        name="DishDetails"
+        component={DishDetails}
         options={{ headerShown: false }}
       />
     </HomeStack.Navigator>
