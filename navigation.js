@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Platform } from "react-native";
+import { View, TouchableOpacity, Platform } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -11,6 +11,7 @@ import CameraScreen from "./src/components/CameraScreen";
 import CarouselItem from "./src/components/CarouselItem";
 import FashionScreen from "./src/components/FashionScreen";
 import HandicraftScreen from "./src/components/HandicraftScreen";
+import { styles } from "./src/styles/stylesButtonBar.js";
 
 const Tab = createBottomTabNavigator();
 const InfoStack = createStackNavigator();
@@ -67,6 +68,7 @@ function MyTabs() {
   return (
     <Tab.Navigator
       screenOptions={{
+        tabBarActiveTintColor: "#FF6346",
         tabBarShowLabel: false,
         tabBarStyle: {
           position: "absolute",
@@ -154,38 +156,3 @@ export default function Navigation() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  shadow: {
-    shadowColor: "#7F5DF0",
-    shadowOffset: {
-      width: 0,
-      height: 10,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.5,
-    elevation: 5,
-  },
-  cameraButton: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: 70,
-    height: 70,
-    backgroundColor: "#FF6347",
-    borderRadius: 35,
-    position: "absolute",
-    top: Platform.OS === "ios" ? -30 : -40,
-    shadowColor: "#7F5DF0",
-    shadowOffset: {
-      width: 0,
-      height: 10,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.5,
-    elevation: 5,
-  },
-  cameraIconContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
