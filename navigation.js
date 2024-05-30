@@ -9,6 +9,8 @@ import HomePage from "./src/components/Home";
 import DishDetails from "./src/components/DishDetails";
 import CameraScreen from "./src/components/CameraScreen";
 import CarouselItem from "./src/components/CarouselItem";
+import FashionScreen from "./src/components/FashionScreen";
+import HandicraftScreen from "./src/components/HandicraftScreen";
 
 const Tab = createBottomTabNavigator();
 const InfoStack = createStackNavigator();
@@ -68,7 +70,7 @@ function MyTabs() {
         tabBarShowLabel: false,
         tabBarStyle: {
           position: "absolute",
-          bottom: Platform.OS === 'ios' ? 15 : 10,
+          bottom: Platform.OS === "ios" ? 15 : 10,
           left: 20,
           right: 20,
           elevation: 0,
@@ -85,6 +87,20 @@ function MyTabs() {
         options={{
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" size={30} color={color} />
+          ),
+          headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="Fashion"
+        component={FashionScreen}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons
+              name="tshirt-crew"
+              size={30}
+              color={color}
+            />
           ),
           headerShown: false,
         }}
@@ -113,6 +129,16 @@ function MyTabs() {
               size={30}
               color={color}
             />
+          ),
+          headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="Handicraft"
+        component={HandicraftScreen}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="brush" size={30} color={color} />
           ),
           headerShown: false,
         }}
@@ -148,7 +174,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FF6347",
     borderRadius: 35,
     position: "absolute",
-    top: Platform.OS === 'ios' ? -30 : -40,
+    top: Platform.OS === "ios" ? -30 : -40,
     shadowColor: "#7F5DF0",
     shadowOffset: {
       width: 0,
