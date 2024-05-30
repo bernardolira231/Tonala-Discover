@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Platform } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -56,7 +56,7 @@ function MyStack() {
 const CameraButton = ({ onPress }) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.cameraButton}>
-      <MaterialCommunityIcons name="camera" color="#fff" size={30} />
+      <MaterialCommunityIcons name="camera" color="#fff" size={40} />
     </TouchableOpacity>
   );
 };
@@ -68,13 +68,13 @@ function MyTabs() {
         tabBarShowLabel: false,
         tabBarStyle: {
           position: "absolute",
-          bottom: 25,
+          bottom: Platform.OS === 'ios' ? 15 : 10,
           left: 20,
           right: 20,
           elevation: 0,
           backgroundColor: "#ffffff",
           borderRadius: 15,
-          height: 90,
+          height: 70,
           ...styles.shadow,
         },
       }}
@@ -83,8 +83,8 @@ function MyTabs() {
         name="Home"
         component={HomeStackScreen}
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" size={size} color={color} />
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="home" size={30} color={color} />
           ),
           headerShown: false,
         }}
@@ -107,10 +107,10 @@ function MyTabs() {
         name="Dishes"
         component={MyStack}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
               name="food-fork-drink"
-              size={size}
+              size={30}
               color={color}
             />
           ),
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FF6347",
     borderRadius: 35,
     position: "absolute",
-    top: -30,
+    top: Platform.OS === 'ios' ? -30 : -40,
     shadowColor: "#7F5DF0",
     shadowOffset: {
       width: 0,
