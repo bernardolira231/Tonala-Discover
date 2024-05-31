@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet, ScrollView } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import TryCarousel from "../../components/TryCarousel.jsx";
+import TryCarousel from "../../components/MyCarrousel.jsx";
 import dishes from "../../../data/dishes.json";
 
 const Home = () => {

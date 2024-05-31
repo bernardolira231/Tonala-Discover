@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet } from "react-native";
-import Dishes from "../../components/Dishes.jsx";
+import Dishes from "../../components/ListsCard.jsx";
 import { StatusBar } from "expo-status-bar";
 
 const MainDishes = () => {
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     backgroundColor: "#f0f0f0",
     flex: 1,
+    paddingBottom: 60,
   },
   scrollViewContent: {},
 });

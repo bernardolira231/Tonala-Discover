@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, FlatList, View, StyleSheet } from "react-native";
 import dishes from "../../data/dishes.json";
-import DishItem from "./DishItem.jsx";
+import DishItem from "./CardItem.jsx";
 
 const Dishes = () => {
   return (
