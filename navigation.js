@@ -55,18 +55,10 @@ function MyStack() {
   );
 }
 
-const CameraButton = ({ onPress }) => {
-  return (
-    <TouchableOpacity onPress={onPress} style={styles.cameraButton}>
-      <MaterialCommunityIcons name="camera" color="#fff" size={40} />
-    </TouchableOpacity>
-  );
-};
-
 function MyTabs() {
   return (
     <Tab.Navigator
-      screenOptions={{
+      screenOptions={({ route }) => ({
         tabBarActiveTintColor: "#FF6346",
         tabBarShowLabel: false,
         tabBarStyle: {
@@ -78,9 +70,10 @@ function MyTabs() {
           backgroundColor: "#ffffff",
           borderRadius: 15,
           height: 70,
+          display: route.name === "Camera" ? "none" : "flex", // Ocultar la tab bar en CameraScreen
           ...styles.shadow,
         },
-      }}
+      })}
     >
       <Tab.Screen
         name="Home"
@@ -110,11 +103,9 @@ function MyTabs() {
         name="Camera"
         component={CameraScreen}
         options={{
-          tabBarIcon: ({ focused }) => (
-            <View style={styles.cameraIconContainer}>
-              <CameraButton
-                onPress={() => console.log("Camera Button Pressed")}
-              />
+          tabBarIcon: ({ focused, color }) => (
+            <View style={styles.cameraButton}>
+              <MaterialCommunityIcons name="camera" color="white" size={40} />
             </View>
           ),
           headerShown: false,

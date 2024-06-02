@@ -18,7 +18,7 @@ const DishItem = (props) => {
                 id: props.id,
                 name: props.name,
                 description: props.description,
-                image: props.image2,
+                image: props.image,
                 ingredients: props.ingredients,
               })
             }

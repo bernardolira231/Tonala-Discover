@@ -19,7 +19,8 @@ export const styles = StyleSheet.create({
     backgroundColor: "#FF6347",
     borderRadius: 35,
     position: "absolute",
-    top: Platform.OS === "ios" ? -30 : -40,
+    // top: Platform.OS === "ios" ? -30 : -40,
+    top: -10,
     shadowColor: "#7F5DF0",
     shadowOffset: {
       width: 0,
