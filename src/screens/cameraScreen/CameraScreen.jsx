@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "flex-start",
     padding: 20,
-    paddingTop: 100, // Lower the back button a bit
+    paddingTop: 50, // Lower the back button a bit
     backgroundColor: "rgba(0, 0, 0, 0.2)", // Add some background color to make it look more like the iPhone camera
   },
   backButton: {
