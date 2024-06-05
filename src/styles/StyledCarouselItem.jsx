@@ -1,39 +1,39 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
     borderRadius: 20,
-    overflow: "hidden",
+    overflow: 'hidden',
     marginVertical: 10,
-    marginHorizontal: 15,
+    marginHorizontal: 15
   },
   image: {
     width: 200,
     height: 300,
-    justifyContent: "flex-end",
+    justifyContent: 'flex-end'
   },
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.3)",
+    backgroundColor: 'rgba(0,0,0,0.3)'
   },
   textContainer: {
-    padding: 15,
+    padding: 15
   },
   title: {
     fontSize: 18,
-    fontWeight: "bold",
-    color: "#fff",
-    marginBottom: 10,
+    fontWeight: 'bold',
+    color: '#fff',
+    marginBottom: 10
   },
   button: {
-    backgroundColor: "#FF6347",
+    backgroundColor: '#FF6347',
     paddingVertical: 8,
     paddingHorizontal: 12,
     borderRadius: 5,
-    alignSelf: "flex-start",
+    alignSelf: 'flex-start'
   },
   buttonText: {
-    color: "#fff",
-    fontSize: 14,
-  },
-});
+    color: '#fff',
+    fontSize: 14
+  }
+})
