@@ -23,7 +23,6 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   bg: {
-    paddingVertical: 10,
     backgroundColor: '#f0f0f0',
     flex: 1
   }

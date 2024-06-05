@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Platform } from 'react-native'
+import { View, Platform, Image } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
@@ -11,6 +11,7 @@ import CameraScreen from './src/screens/cameraScreen/CameraScreen.jsx'
 import FashionScreen from './src/screens/fashionScreen/FashionScreen.jsx'
 import HandicraftScreen from './src/screens/handicraftScreen/HandicraftScreen.jsx'
 import { styles } from './src/styles/stylesButtonBar.js'
+import logo from './assets/img/logo.png'
 
 const Tab = createBottomTabNavigator()
 const InfoStack = createStackNavigator()
@@ -22,7 +23,15 @@ function HomeStackScreen () {
       <HomeStack.Screen
         name='HomeStack'
         component={HomePage}
-        options={{ headerShown: false }}
+        options={{
+          headerTitle: () => (
+            <Image
+              style={{ width: 100, height: 40 }}
+              source={logo}
+              resizeMode='contain'
+            />
+          )
+        }}
       />
       <HomeStack.Screen
         name='DishesStack'
@@ -82,7 +91,7 @@ function MyTabs () {
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name='home' size={30} color={color} />
           ),
-          headerTitle: 'Tonalá Discover'
+          headerShown: false
         }}
       />
       <Tab.Screen

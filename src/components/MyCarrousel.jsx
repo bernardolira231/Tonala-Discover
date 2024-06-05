@@ -2,14 +2,14 @@ import React from 'react'
 import {
   Text,
   View,
-  StyleSheet,
   Animated,
   TouchableOpacity,
   Dimensions
 } from 'react-native'
-import { AntDesign } from '@expo/vector-icons' // Asegúrate de tener expo-vector-icons instalado
-import CarouselItem from './CarouselItem.jsx'
+import { AntDesign } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
+import { styles } from '@styles/StyledCarousel.jsx'
+import CarouselItem from '@components/CarouselItem.jsx'
 
 const { width } = Dimensions.get('window')
 
@@ -58,46 +58,5 @@ const TryCarousel = ({ header, data, screen }) => {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: 100 // Ajusta según sea necesario
-  },
-  h1: {
-    fontSize: 24,
-    fontWeight: '700',
-    textAlign: 'left',
-    alignItems: 'flex-end',
-    paddingHorizontal: 20,
-    marginVertical: 10,
-    color: '#202020'
-  },
-  carouselContainer: {
-    paddingTop: -30
-  },
-  showMoreContainer: {
-    width: 80,
-    height: 300,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 10,
-    marginHorizontal: 15,
-    paddingTop: 10
-  },
-  showMoreButton: {
-    width: 60,
-    height: 60,
-    backgroundColor: '#FF6347',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 30
-  },
-  showMoreText: {
-    color: '#FF6347',
-    fontSize: 14,
-    fontWeight: 'bold',
-    marginTop: 5
-  }
-})
 
 export default TryCarousel
