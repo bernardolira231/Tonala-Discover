@@ -1,26 +1,25 @@
-import React from "react";
+import React from 'react'
 import {
   View,
   ImageBackground,
   Text,
-  TouchableWithoutFeedback,
-} from "react-native";
-import { styles } from "../styles/StyledCarouselItem";
-import { useNavigation } from "@react-navigation/native";
+  TouchableWithoutFeedback
+} from 'react-native'
+import { styles } from '../styles/StyledCarouselItem'
+import { useNavigation } from '@react-navigation/native'
 
 const CarouselItem = (props) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
   return (
     <TouchableWithoutFeedback
       onPress={() =>
-        navigation.navigate("DishDetails", {
+        navigation.navigate('DishDetails', {
           id: props.id,
           name: props.name,
           description: props.description,
           image: props.image,
-          ingredients: props.ingredients,
-        })
-      }
+          ingredients: props.ingredients
+        })}
     >
       <View key={props.id} style={styles.container}>
         <ImageBackground source={{ uri: props.image }} style={styles.image}>
@@ -31,7 +30,7 @@ const CarouselItem = (props) => {
         </ImageBackground>
       </View>
     </TouchableWithoutFeedback>
-  );
-};
+  )
+}
 
-export default CarouselItem;
+export default CarouselItem

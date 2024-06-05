@@ -1,10 +1,10 @@
-import React from "react";
-import { View, ImageBackground, Text, TouchableOpacity } from "react-native";
-import { styles } from "../styles/StyledDishesCard";
-import { useNavigation } from "@react-navigation/native";
+import React from 'react'
+import { View, ImageBackground, Text, TouchableOpacity } from 'react-native'
+import { styles } from '../styles/StyledDishesCard'
+import { useNavigation } from '@react-navigation/native'
 
 const DishItem = (props) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
   return (
     <View key={props.id} style={styles.container}>
       <ImageBackground source={{ uri: props.image }} style={styles.image}>
@@ -14,21 +14,20 @@ const DishItem = (props) => {
           <TouchableOpacity
             style={styles.button}
             onPress={() =>
-              navigation.navigate("DishDetails", {
+              navigation.navigate('DishDetails', {
                 id: props.id,
                 name: props.name,
                 description: props.description,
                 image: props.image,
-                ingredients: props.ingredients,
-              })
-            }
+                ingredients: props.ingredients
+              })}
           >
             <Text style={styles.buttonText}>Show More</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>
-  );
-};
+  )
+}
 
-export default DishItem;
+export default DishItem
