@@ -2,7 +2,8 @@ import React from 'react'
 import { StyleSheet, ScrollView } from 'react-native'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
-import TryCarousel from '../../components/MyCarrousel.jsx'
+import TryCarousel from '@components/MyCarrousel.jsx'
+import Banner from '@components/Banner.jsx'
 import dishes from '../../../data/dishes.json'
 
 const Home = () => {
@@ -10,8 +11,6 @@ const Home = () => {
     <SafeAreaProvider>
       <SafeAreaView style={styles.bg}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <TryCarousel header='Dishes' data={dishes} screen='Dishes' />
-          <TryCarousel header='Dishes' data={dishes} screen='Dishes' />
           <TryCarousel header='Dishes' data={dishes} screen='Dishes' />
         </ScrollView>
         <StatusBar style='auto' />
