@@ -1,28 +1,19 @@
 import React from 'react'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
-import { StyleSheet } from 'react-native'
-import Dishes from '../../components/ListsCard.jsx'
+import Dishes from '@components/ListsCard.jsx'
 import { StatusBar } from 'expo-status-bar'
+import { styles } from '@styles/StyledDishesScreen.jsx'
+import { globalStyles } from '@styles/StyledGlobalScreen'
 
 const MainDishes = () => {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={styles.bg}>
+      <SafeAreaView style={[styles.bg, globalStyles.bgColor]}>
         <Dishes />
         <StatusBar style='dark' />
       </SafeAreaView>
     </SafeAreaProvider>
   )
 }
-
-const styles = StyleSheet.create({
-  bg: {
-    paddingVertical: 10,
-    backgroundColor: '#f0f0f0',
-    flex: 1,
-    paddingBottom: 60
-  },
-  scrollViewContent: {}
-})
 
 export default MainDishes

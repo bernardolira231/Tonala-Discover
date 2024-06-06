@@ -1,18 +1,20 @@
 import React from 'react'
-import { StyleSheet, ScrollView } from 'react-native'
+import { ScrollView } from 'react-native'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import TryCarousel from '@components/MyCarrousel.jsx'
 import Banner from '@components/Banner.jsx'
+import { styles } from '@styles/StyledHomeScreen'
+import { globalStyles } from '@styles/StyledGlobalScreen'
 import dishes from '../../../data/dishes.json'
 import bannerImage from '../../../assets/img/banner.webp'
 
 const Home = () => {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={styles.bg}>
+      <SafeAreaView style={[styles.bg, globalStyles.bgColor]}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <Banner image={bannerImage} header='Tonalá as a vibrant tourist destination in Jalisco ' />
+          <Banner image={bannerImage} header='Tonalá as a vibrant tourist destination in Jalisco' />
           <TryCarousel header='Dishes' data={dishes} screen='Dishes' />
         </ScrollView>
         <StatusBar style='auto' />
@@ -20,12 +22,5 @@ const Home = () => {
     </SafeAreaProvider>
   )
 }
-
-const styles = StyleSheet.create({
-  bg: {
-    backgroundColor: '#f0f0f0',
-    flex: 1
-  }
-})
 
 export default Home

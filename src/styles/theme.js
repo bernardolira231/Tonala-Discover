@@ -1,20 +1,11 @@
 const theme = {
   colors: {
-    textPrimary: "#E0E0E0",
-    textSecondary: "#B0B0B0",
-  },
-  fontSizes: {
-    body: 14,
-    title: 24,
-    subHeading: 20,
-  },
-  fonts: {
-    main: "System",
-  },
-  fontWeights: {
-    normal: "400",
-    bold: "700",
-  },
-};
+    firstColor: '#728A8C',
+    secondColor: '#BFACA4',
+    backgroundColor: '#F2F0F0',
+    fourthColor: '#A63E26',
+    fifthColor: '#A68481'
+  }
+}
 
-export default theme;
+export default theme

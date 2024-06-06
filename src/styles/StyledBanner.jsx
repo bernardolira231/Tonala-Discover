@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import theme from '@styles/theme.js'
 
 export const styles = StyleSheet.create({
   h1: {
