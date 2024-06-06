@@ -3,6 +3,7 @@ import theme from '@styles/theme'
 
 export const globalStyles = StyleSheet.create({
   bgColor: {
-    backgroundColor: theme.colors.backgroundColor
+    backgroundColor: theme.colors.bgColor,
+    color: theme.colors.textPrimary
   }
 })

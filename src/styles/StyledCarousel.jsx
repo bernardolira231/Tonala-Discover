@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     alignItems: 'flex-end',
     paddingHorizontal: 20,
     marginVertical: 10,
-    color: '#202020'
+    color: theme.colors.textPrimary
   },
   carouselContainer: {
     paddingTop: -30
@@ -29,13 +29,13 @@ export const styles = StyleSheet.create({
   showMoreButton: {
     width: 60,
     height: 60,
-    backgroundColor: '#FF6347',
+    backgroundColor: theme.colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30
   },
   showMoreText: {
-    color: '#FF6347',
+    color: theme.colors.primary,
     fontSize: 14,
     fontWeight: 'bold',
     marginTop: 5

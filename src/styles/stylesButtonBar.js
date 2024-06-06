@@ -1,9 +1,9 @@
-import { StyleSheet, Platform } from 'react-native'
+import { StyleSheet } from 'react-native'
 import theme from '@styles/theme.js'
 
 export const styles = StyleSheet.create({
   shadow: {
-    shadowColor: '#7F5DF0',
+    shadowColor: '#000000',
     shadowOffset: {
       width: 0,
       height: 10
@@ -17,12 +17,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     width: 70,
     height: 70,
-    backgroundColor: '#FF6347',
+    backgroundColor: theme.colors.primary,
     borderRadius: 35,
     position: 'absolute',
     // top: Platform.OS === "ios" ? -30 : -40,
     top: -10,
-    shadowColor: '#7F5DF0',
+    shadowColor: '#000000',
     shadowOffset: {
       width: 0,
       height: 10

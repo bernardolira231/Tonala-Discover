@@ -25,6 +25,11 @@ function HomeStackScreen () {
         name='HomeStack'
         component={HomePage}
         options={{
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor,
+            shadowColor: 'transparent',
+            shadowOpacity: 0
+          },
           headerTitle: () => (
             <Image
               style={{ width: 100, height: 40 }}
@@ -69,7 +74,7 @@ function MyTabs () {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        tabBarActiveTintColor: '#FF6346',
+        tabBarActiveTintColor: theme.colors.secondary,
         tabBarShowLabel: false,
         tabBarStyle: {
           position: 'absolute',
@@ -77,7 +82,7 @@ function MyTabs () {
           left: 20,
           right: 20,
           elevation: 0,
-          backgroundColor: '#ffffff',
+          backgroundColor: theme.colors.bgColor,
           borderRadius: 15,
           height: 70,
           display: route.name === 'Camera' ? 'none' : 'flex', // Ocultar la tab bar en CameraScreen
