@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import theme from '@styles/theme'
 
 export const styles = StyleSheet.create({
   container: {
@@ -6,25 +7,29 @@ export const styles = StyleSheet.create({
     padding: 16
   },
   header: {
-    backgroundColor: '#FFD365',
-    borderRadius: 30,
+    backgroundColor: theme.colors.primary,
+    borderRadius: 20,
     padding: 16,
     textAlign: 'center'
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: theme.colors.textPrimary
   },
   description: {
     fontSize: 14,
-    paddingVertical: 8
+    paddingVertical: 8,
+    color: theme.colors.textSecondary
   },
   subtitle: {
     fontSize: 18,
-    fontWeight: '600'
+    fontWeight: '600',
+    color: theme.colors.textPrimary
   },
   ingredients: {
-    fontSize: 14
+    fontSize: 14,
+    color: theme.colors.textSecondary
   },
   imageContainer: {
     flex: 1,

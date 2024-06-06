@@ -9,7 +9,7 @@ const MainDishes = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={[styles.bg, globalStyles.bgColor]}>
-        <Dishes />
+        <Dishes title='Dishes' />
         <StatusBar style='dark' />
       </SafeAreaView>
     </SafeAreaProvider>

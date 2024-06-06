@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
     marginBottom: 10
   },
   button: {
-    backgroundColor: '#FF6347',
+    backgroundColor: theme.colors.primary,
     paddingVertical: 8,
     paddingHorizontal: 12,
     borderRadius: 5,
