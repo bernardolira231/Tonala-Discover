@@ -3,7 +3,7 @@ import { View, Platform, Image } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons'
 import MainDishes from './src/screens/dishesScreen/DishesScreen.jsx'
 import HomePage from './src/screens/homeScreen/HomeScreen.jsx'
 import DishDetails from './src/screens/dishDetailScreen/DishDetails.jsx'
@@ -85,7 +85,7 @@ function MyTabs () {
           backgroundColor: theme.colors.bgColor,
           borderRadius: 15,
           height: 70,
-          display: route.name === 'Camera' ? 'none' : 'flex', // Ocultar la tab bar en CameraScreen
+          display: route.name === 'Camera' ? 'none' : 'flex',
           ...styles.shadow
         }
       })}
@@ -120,7 +120,7 @@ function MyTabs () {
         options={{
           tabBarIcon: ({ focused, color }) => (
             <View style={styles.cameraButton}>
-              <MaterialCommunityIcons name='camera' color='white' size={40} />
+              <Ionicons name='qr-code-outline' color='white' size={40} />
             </View>
           ),
           headerShown: false
