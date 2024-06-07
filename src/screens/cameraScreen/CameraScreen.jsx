@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Text, View, StyleSheet, Alert, TouchableOpacity } from 'react-native'
+import { Text, View, StyleSheet, TouchableOpacity, Alert } from 'react-native'
 import { CameraView, Camera } from 'expo-camera'
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
@@ -18,9 +18,24 @@ export default function App () {
     getCameraPermissions()
   }, [])
 
-  const handleBarCodeScanned = ({ type, data }) => {
+  const handleBarCodeScanned = ({ data }) => {
     setScanned(true)
-    Alert.alert(`Bar code with type ${type} and data ${data} has been scanned!`)
+    try {
+      const params = JSON.parse(data)
+      if (params.id && params.name && params.description && params.image && params.ingredients) {
+        navigation.navigate('DishDetails', {
+          id: params.id,
+          name: params.name,
+          description: params.description,
+          image: params.image,
+          ingredients: params.ingredients
+        })
+      } else {
+        throw new Error('Invalid structure')
+      }
+    } catch (error) {
+      Alert.alert('Invalid QR Code', 'The scanned QR code does not contain the required data structure.')
+    }
   }
 
   if (hasPermission === null) {
