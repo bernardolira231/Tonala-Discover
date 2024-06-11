@@ -1,18 +1,17 @@
 import React from 'react'
 import { Text, FlatList } from 'react-native'
-import dishes from '../../data/dishes.json'
 import DishItem from './CardItem.jsx'
 import { styles } from '../styles/StyledListCard.jsx'
 
-const Dishes = ({ title }) => {
+const ListCards = ({ title, data, map, extraFields = [], type }) => {
   return (
     <FlatList
       nestedScrollEnabled
-      data={dishes}
+      data={data}
       ListHeaderComponent={<Text style={styles.h1}>{title}</Text>}
-      renderItem={({ item }) => <DishItem {...item} />}
+      renderItem={({ item }) => <DishItem item={item} map={map} extraFields={extraFields} type={type} />}
     />
   )
 }
 
-export default Dishes
+export default ListCards

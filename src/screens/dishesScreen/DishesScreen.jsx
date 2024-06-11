@@ -4,12 +4,21 @@ import Dishes from '../../components/ListsCard.jsx'
 import { StatusBar } from 'expo-status-bar'
 import { styles } from '../../styles/StyledDishesScreen.jsx'
 import { globalStyles } from '../../styles/StyledGlobalScreen'
+import dishes from '../../../data/dishes.json'
+
+const dishesmap = {
+  id: 'id',
+  name: 'name',
+  image: 'image',
+  description: 'description',
+  ingredients: 'ingredients'
+}
 
 const MainDishes = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={[styles.bg, globalStyles.bgColor]}>
-        <Dishes title='Dishes' />
+        <Dishes title='Dishes' data={dishes} map={dishesmap} type='dish' />
         <StatusBar style='dark' />
       </SafeAreaView>
     </SafeAreaProvider>

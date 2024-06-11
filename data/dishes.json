@@ -16,15 +16,12 @@
   },
   {
       "id": 2,
-      "name": "Corn Tamale",
+      "name": "Ceviche de mango",
       "ingredients": [
-          "Tender corn",
-          "Sugar",
-          "Butter",
-          "Corn husks"
+        "Mango", "pepino", "cebolla morada", "ciruela", "Chile serrano", "aguacate", "una salsa reducida de jamaica"
       ],
-      "description": "A sweet tamale made from tender corn, served hot and often accompanied by cream or condensed milk.",
-      "image": "https://www.recetasnestle.com.mx/sites/default/files/srh_recipes/69cbdff610ad0e8487e360ceadd99d09.jpg"
+      "description": "Ceviche vegetariano de mango, pepino y ciruela, emplatado en una hoja de plátano, decorado con una rosa de aguacate y salsa de jamaica.",
+      "image": "ceviche.jpeg"
   },
   {
       "id": 3,

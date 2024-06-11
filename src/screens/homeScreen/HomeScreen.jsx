@@ -14,8 +14,8 @@ const Home = () => {
     <SafeAreaProvider>
       <SafeAreaView style={[styles.bg, globalStyles.bgColor]}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <Banner image={bannerImage} header='Tonalá as a vibrant tourist destination in Jalisco' />
-          <TryCarousel header='Dishes' data={dishes} screen='Dishes' />
+          <Banner image={bannerImage} header='Thank you for visiting us, we hope you come back soon!' />
+          <TryCarousel header='Dishes' data={dishes} screen='Dishes' type='dish' />
         </ScrollView>
         <StatusBar style='auto' />
       </SafeAreaView>

@@ -3,7 +3,7 @@ import { View, Platform, Image } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons'
+import { MaterialCommunityIcons, Ionicons, FontAwesome6 } from '@expo/vector-icons'
 import MainDishes from './src/screens/dishesScreen/DishesScreen.jsx'
 import HomePage from './src/screens/homeScreen/HomeScreen.jsx'
 import DishDetails from './src/screens/dishDetailScreen/DishDetails.jsx'
@@ -17,6 +17,7 @@ import logo from './assets/img/logo.png'
 const Tab = createBottomTabNavigator()
 const InfoStack = createStackNavigator()
 const HomeStack = createStackNavigator()
+const HandicraftStack = createStackNavigator()
 
 function HomeStackScreen () {
   return (
@@ -67,6 +68,23 @@ function MyStack () {
         options={{ headerShown: false }}
       />
     </InfoStack.Navigator>
+  )
+}
+
+function TheHandicraftStack () {
+  return (
+    <HandicraftStack.Navigator initialRouteName='HandicraftScreen'>
+      <HandicraftStack.Screen
+        name='HandicraftScreen'
+        component={HandicraftScreen}
+        options={{ headerShown: false }}
+      />
+      <HandicraftStack.Screen
+        name='HandicraftDetails'
+        component={DishDetails}
+        options={{ headerShown: false }}
+      />
+    </HandicraftStack.Navigator>
   )
 }
 
@@ -142,10 +160,10 @@ function MyTabs () {
       />
       <Tab.Screen
         name='Handicraft'
-        component={HandicraftScreen}
+        component={TheHandicraftStack}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name='brush' size={30} color={color} />
+            <FontAwesome6 name='jar' size={30} color={color} />
           ),
           headerShown: false
         }}

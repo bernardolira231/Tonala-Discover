@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "craftName": "Barro Canelo",
+    "craftsmanName": "",
+    "information": "Elegant women's headdress made of gold, flowers made of canelo clay, colors based on a terracotta palette and purple gradient, made with natural stones, river pearls, and beads. Clay pieces fired at 600-700 degrees °C. Hand-embroidered.",
+    "materials": [],
+    "images": [],
+    "recommendations": "Do not come into contact with water and clean with a slightly damp cloth. NO soap.",
+    "productionTime": "One week"
+  },
+  {
+    "id": 2,
+    "craftName": "Earrings",
+    "craftsmanName": "",
+    "information": "Elegant earring/cufflink with the figure of the so-called “Tonalá Flower”, the material is composed of canelo clay plates, pigmented with natural earths. Clay pieces fired at 600-700 degrees °C.",
+    "materials": [],
+    "images": [],
+    "recommendations": "",
+    "productionTime": "One week"
+  },
+  {
+    "id": 3,
+    "craftName": "Bag",
+    "craftsmanName": "José Antonio Gutiérrez Padilla",
+    "information": "Clutch-style bag for women based on a terracotta color palette and purple details. It features an artisanal technique called colonial loom. Made with goat leather.",
+    "materials": [],
+    "images": [],
+    "recommendations": "Clean with a slightly damp cloth. NO soap.",
+    "productionTime": "One week"
+  },
+  {
+    "id": 4,
+    "craftName": "Bag",
+    "craftsmanName": "José Antonio Gutiérrez Padilla",
+    "information": "Handbag for men based on a terracotta color palette and purple details. It features an artisanal technique called colonial loom. Made with goat leather.",
+    "materials": [],
+    "images": [],
+    "recommendations": "Clean with a slightly damp cloth. NO soap.",
+    "productionTime": "One week"
+  },
+  {
+    "id": 5,
+    "craftName": "Shoes",
+    "craftsmanName": "Ismael Chávez Hernández",
+    "information": "Women's shoes made from goat leather.",
+    "materials": [],
+    "images": [],
+    "recommendations": "Clean with a slightly damp cloth. NO soap.",
+    "productionTime": "At least one week"
+  },
+  {
+    "id": 6,
+    "craftName": "Shoes",
+    "craftsmanName": "Ismael Chávez Hernández",
+    "information": "Men's shoes.",
+    "materials": [],
+    "images": [],
+    "recommendations": "",
+    "productionTime": "At least one week"
+  }
+]

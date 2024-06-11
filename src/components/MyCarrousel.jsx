@@ -13,7 +13,7 @@ import CarouselItem from '../components/CarouselItem.jsx'
 
 const { width } = Dimensions.get('window')
 
-const TryCarousel = ({ header, data, screen }) => {
+const TryCarousel = ({ header, data, screen, type }) => {
   const navigation = useNavigation()
   const scrollX = React.useRef(new Animated.Value(0)).current
   const limitedData = [
@@ -35,7 +35,7 @@ const TryCarousel = ({ header, data, screen }) => {
         </View>
       )
     }
-    return <CarouselItem {...item} />
+    return <CarouselItem props={item} type={type} />
   }
 
   return (
@@ -51,7 +51,7 @@ const TryCarousel = ({ header, data, screen }) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.carouselContainer}
-        snapToInterval={width * 0.8} // Ajusta el ancho para el carrusel
+        snapToInterval={width * 0.8}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
       />

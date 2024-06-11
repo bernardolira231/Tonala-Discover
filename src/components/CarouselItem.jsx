@@ -8,17 +8,14 @@ import {
 import { styles } from '../styles/StyledCarouselItem'
 import { useNavigation } from '@react-navigation/native'
 
-const CarouselItem = (props) => {
+const CarouselItem = ({ props, type }) => {
   const navigation = useNavigation()
   return (
     <TouchableWithoutFeedback
       onPress={() =>
         navigation.navigate('DishDetails', {
-          id: props.id,
-          name: props.name,
-          description: props.description,
-          image: props.image,
-          ingredients: props.ingredients
+          ...props,
+          type
         })}
     >
       <View key={props.id} style={styles.container}>
