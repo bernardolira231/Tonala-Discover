@@ -3,11 +3,6 @@ import { View, ImageBackground, Text, TouchableOpacity } from 'react-native'
 import { styles } from '../styles/StyledDishesCard'
 import { useNavigation } from '@react-navigation/native'
 
-const localImages = {
-  'ceviche.jpeg': require('../../assets/img/ceviche.jpeg')
-  // Añade más imágenes aquí según sea necesario
-}
-
 const DishItem = ({ item, map, extraFields, type }) => {
   const navigation = useNavigation()
   const mappedItem = {
@@ -23,9 +18,8 @@ const DishItem = ({ item, map, extraFields, type }) => {
     return acc
   }, {})
 
-  const imageSource = mappedItem.image.startsWith('http')
-    ? { uri: mappedItem.image }
-    : localImages[mappedItem.image]
+  const imageSource = { uri: mappedItem.image }
+
   return (
     <View key={mappedItem.id} style={styles.container}>
       <ImageBackground source={imageSource} style={styles.image}>

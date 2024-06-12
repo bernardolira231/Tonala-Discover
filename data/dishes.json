@@ -21,7 +21,7 @@
         "Mango", "pepino", "cebolla morada", "ciruela", "Chile serrano", "aguacate", "una salsa reducida de jamaica"
       ],
       "description": "Ceviche vegetariano de mango, pepino y ciruela, emplatado en una hoja de plátano, decorado con una rosa de aguacate y salsa de jamaica.",
-      "image": "ceviche.jpeg"
+      "image": "https://res.cloudinary.com/dkbea9fbb/image/upload/v1718154708/ceviche_ti2ysp.jpg"
   },
   {
       "id": 3,
