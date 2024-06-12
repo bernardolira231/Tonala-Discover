@@ -5,22 +5,7 @@ import { globalStyles } from '../../styles/StyledGlobalScreen'
 import { StatusBar } from 'expo-status-bar'
 import HandCraft from '../../components/ListsCard.jsx'
 import handicrafts from '../../../data/handicraft.json'
-
-const handicraftsmap = {
-  id: 'id',
-  name: 'itemName',
-  image: 'image',
-  description: 'description',
-  recomendations: 'recommendations',
-  productionTime: 'productionTime',
-  craftsmanName: 'craftsmanName',
-  collaboration: 'collaboration',
-  collectionName: 'collectionName',
-  itemType: 'itemType',
-  designedBy: 'designedBy'
-}
-
-const extraFields = ['recomendations', 'productionTime', 'craftsmanName', 'collaboration', 'collectionName', 'itemType', 'designedBy']
+import { handicraftsmap, extraFields } from '../../constants/handicraftConst.js'
 
 const HandicraftScreen = () => {
   return (
