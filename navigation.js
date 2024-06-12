@@ -7,6 +7,7 @@ import { MaterialCommunityIcons, Ionicons, FontAwesome6 } from '@expo/vector-ico
 import MainDishes from './src/screens/dishesScreen/DishesScreen.jsx'
 import HomePage from './src/screens/homeScreen/HomeScreen.jsx'
 import DishDetails from './src/screens/dishDetailScreen/DishDetails.jsx'
+import DetailsScreen from './src/screens/detailScreen/Details.jsx'
 import CameraScreen from './src/screens/cameraScreen/CameraScreen.jsx'
 import FashionScreen from './src/screens/fashionScreen/FashionScreen.jsx'
 import HandicraftScreen from './src/screens/handicraftScreen/HandicraftScreen.jsx'
@@ -81,7 +82,7 @@ function TheHandicraftStack () {
       />
       <HandicraftStack.Screen
         name='HandicraftDetails'
-        component={DishDetails}
+        component={DetailsScreen}
         options={{ headerShown: false }}
       />
     </HandicraftStack.Navigator>
