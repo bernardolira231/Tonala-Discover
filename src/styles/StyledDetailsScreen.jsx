@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 40
+    padding: 40,
+    paddingTop: 16
   },
   header: {
     textAlign: 'center'
