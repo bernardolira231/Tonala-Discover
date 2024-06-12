@@ -22,6 +22,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "737aa82b-0243-4d1f-98ef-8d0e7cb74c54"
+      }
+    },
+    "owner": "bernardolira231"
   }
 }
