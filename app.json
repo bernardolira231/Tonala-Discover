@@ -16,7 +16,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.webp",
         "backgroundColor": "#ffffff"
       },
       "package": "com.bernardolira231.Mestizarte"
