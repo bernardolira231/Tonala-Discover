@@ -13,7 +13,7 @@ import CarouselItem from '../components/CarouselItem.jsx'
 
 const { width } = Dimensions.get('window')
 
-const TryCarousel = ({ header, data, screen, type }) => {
+const TryCarousel = ({ header, data, screen, type, map, extraField = [] }) => {
   const navigation = useNavigation()
   const scrollX = React.useRef(new Animated.Value(0)).current
   const limitedData = [
@@ -35,7 +35,12 @@ const TryCarousel = ({ header, data, screen, type }) => {
         </View>
       )
     }
-    return <CarouselItem props={item} type={type} />
+    if (type === 'dish') {
+      return <CarouselItem props={item} type={type} />
+    }
+    if (type === 'handicraft') {
+      return <CarouselItem props={item} type={type} map={map} extraFields={extraField} />
+    }
   }
 
   return (
