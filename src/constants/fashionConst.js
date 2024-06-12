@@ -1,4 +1,4 @@
-export const handicraftsmap = {
+export const fashionsmap = {
   id: 'id',
   name: 'itemName',
   image: 'image',

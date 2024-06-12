@@ -38,7 +38,7 @@ const TryCarousel = ({ header, data, screen, type, map, extraField = [] }) => {
     if (type === 'dish') {
       return <CarouselItem props={item} type={type} />
     }
-    if (type === 'handicraft') {
+    if (type === 'fashion') {
       return <CarouselItem props={item} type={type} map={map} extraFields={extraField} />
     }
   }

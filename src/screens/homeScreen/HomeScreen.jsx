@@ -8,8 +8,8 @@ import Map from '../../components/Map.jsx'
 import { styles } from '../../styles/StyledHomeScreen'
 import { globalStyles } from '../../styles/StyledGlobalScreen'
 import dishes from '../../../data/dishes.json'
-import handicrafts from '../../../data/handicraft.json'
-import { handicraftsmap, extraFields } from '../../constants/handicraftConst.js'
+import fashions from '../../../data/fashion.json'
+import { fashionsmap, extraFields } from '../../constants/fashionConst.js'
 import bannerImage from '../../../assets/img/banner.webp'
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
         <ScrollView showsVerticalScrollIndicator={false}>
           <Banner image={bannerImage} header='Thank you for visiting us, we hope you come back soon!' />
           <TryCarousel header='Dishes' data={dishes} screen='Dishes' type='dish' />
-          <TryCarousel header='Handicraft' data={handicrafts} screen='Handicraft' type='handicraft' map={handicraftsmap} extraField={extraFields} />
+          <TryCarousel header='Fashion' data={fashions} screen='Fashion' type='fashion' map={fashionsmap} extraField={extraFields} />
           <Map />
         </ScrollView>
         <StatusBar style='auto' />

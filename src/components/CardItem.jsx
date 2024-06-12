@@ -37,7 +37,7 @@ const DishItem = ({ item, map, extraFields, type }) => {
               <Text style={styles.buttonText}>Show More</Text>
             </TouchableOpacity>
           )}
-          {type === 'handicraft' && (
+          {type === 'fashion' && (
             <TouchableOpacity
               style={styles.button}
               onPress={() =>

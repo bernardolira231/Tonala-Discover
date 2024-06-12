@@ -30,7 +30,7 @@ const CarouselItem = ({ props, type, map, extraFields }) => {
       </TouchableWithoutFeedback>
     )
   }
-  if (type === 'handicraft') {
+  if (type === 'fashion') {
     const mappedItem = {
       id: props[map.id],
       name: props[map.name],

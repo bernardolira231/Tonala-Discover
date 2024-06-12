@@ -3,19 +3,19 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 import { styles } from '../../styles/StyledDishesScreen.jsx'
 import { globalStyles } from '../../styles/StyledGlobalScreen.jsx'
 import { StatusBar } from 'expo-status-bar'
-import Fashion from '../../components/ListsCard.jsx'
-import fashions from '../../../data/fashion.json'
-import { fashionsmap, extraFields } from '../../constants/fashionConst.js'
+import HandCraft from '../../components/ListsCard.jsx'
+import handicrafts from '../../../data/handicraft.json'
+import { handicraftsmap, extraFields } from '../../constants/fashionConst.js'
 
-const FashionScreen = () => {
+const HandicraftScreen = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={[styles.bg, globalStyles.bgColor]}>
-        <Fashion data={fashions} map={fashionsmap} extraFields={extraFields} type='fashion' />
+        <HandCraft title='Handicraft' data={handicrafts} map={handicraftsmap} extraFields={extraFields} type='handicraft' />
         <StatusBar style='dark' />
       </SafeAreaView>
     </SafeAreaProvider>
   )
 }
 
-export default FashionScreen
+export default HandicraftScreen
