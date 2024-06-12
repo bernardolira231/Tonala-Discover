@@ -18,7 +18,7 @@ const Details = ({ route }) => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={[styles.container, globalStyles.bgColor]}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.imageContainer}>
             <Image source={{ uri: image }} style={styles.image} />
           </View>
