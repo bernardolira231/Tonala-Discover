@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native'
-import theme from './theme'
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,28 +9,14 @@ export const styles = StyleSheet.create({
     textAlign: 'center'
   },
   title: {
-    fontSize: 24,
+    fontSize: '30px',
     fontWeight: 'bold',
-    color: theme.colors.textPrimary,
-    marginBottom: 8
+    color: '#8B4513'
   },
   description: {
     fontSize: 16,
-    paddingVertical: 8,
-    color: theme.colors.textSecondary,
-    paddingLeft: 8
-  },
-  subtitle: {
-    fontSize: 20,
-    fontWeight: '600',
-    color: theme.colors.textPrimary,
-    marginBottom: 12
-  },
-  ingredients: {
-    fontSize: 16,
-    color: theme.colors.textSecondary,
-    marginBottom: 4,
-    paddingLeft: 8
+    color: '#A0522D',
+    marginTop: 24
   },
   imageContainer: {
     marginBottom: 16
@@ -41,9 +26,13 @@ export const styles = StyleSheet.create({
     height: 300
   },
   firstpart: {
-    marginBottom: 16
   },
   secondpart: {
-    marginBottom: 16
+    marginTop: 24
+  },
+  textInfo: {
+    fontSize: '16px',
+    color: '#A0522D',
+    marginBottom: 8
   }
 })

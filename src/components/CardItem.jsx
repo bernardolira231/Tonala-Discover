@@ -31,8 +31,7 @@ const DishItem = ({ item, map, extraFields, type }) => {
               style={styles.button}
               onPress={() =>
                 navigation.navigate('DishDetails', {
-                  ...mappedItem,
-                  type
+                  ...mappedItem
                 })}
             >
               <Text style={styles.buttonText}>Show More</Text>
@@ -44,8 +43,7 @@ const DishItem = ({ item, map, extraFields, type }) => {
               onPress={() =>
                 navigation.navigate('HandicraftDetails', {
                   ...mappedItem,
-                  extraFields: extraParams,
-                  type
+                  extraFields: extraParams
                 })}
             >
               <Text style={styles.buttonText}>Show More</Text>
