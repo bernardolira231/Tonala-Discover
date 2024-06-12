@@ -7,6 +7,7 @@ import Banner from '../../components/Banner.jsx'
 import { styles } from '../../styles/StyledHomeScreen'
 import { globalStyles } from '../../styles/StyledGlobalScreen'
 import dishes from '../../../data/dishes.json'
+import handicrafts from '../../../data/handicraft.json'
 import bannerImage from '../../../assets/img/banner.webp'
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
         <ScrollView showsVerticalScrollIndicator={false}>
           <Banner image={bannerImage} header='Thank you for visiting us, we hope you come back soon!' />
           <TryCarousel header='Dishes' data={dishes} screen='Dishes' type='dish' />
+          <TryCarousel header='Handicraft' data={handicrafts} screen='Handicraft' type='handicraft' />
         </ScrollView>
         <StatusBar style='auto' />
       </SafeAreaView>
