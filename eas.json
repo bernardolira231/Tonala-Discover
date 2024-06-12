@@ -9,14 +9,15 @@
     },
     "preview": {
       "distribution": "internal",
-      "ios": {
-        "buildType": "simulator"
-      },
       "android": {
         "buildType": "apk"
       }
     },
-    "production": {}
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      }
+    }
   },
   "submit": {
     "production": {}
