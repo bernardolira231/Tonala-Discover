@@ -159,7 +159,10 @@ function MyTabs () {
               color={color}
             />
           ),
-          headerShown: false
+          headerTitle: 'Fashion',
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          }
         }}
       />
       <Tab.Screen
@@ -185,7 +188,10 @@ function MyTabs () {
               color={color}
             />
           ),
-          headerShown: false
+          headerTitle: 'Dishes',
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          }
         }}
       />
       <Tab.Screen

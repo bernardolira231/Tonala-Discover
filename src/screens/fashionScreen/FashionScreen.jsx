@@ -11,7 +11,7 @@ const FashionScreen = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={[styles.bg, globalStyles.bgColor]}>
-        <HandCraft title='Handicraft' data={handicrafts} map={handicraftsmap} extraFields={extraFields} type='handicraft' />
+        <HandCraft data={handicrafts} map={handicraftsmap} extraFields={extraFields} type='handicraft' />
         <StatusBar style='dark' />
       </SafeAreaView>
     </SafeAreaProvider>

@@ -18,7 +18,7 @@ const MainDishes = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={[styles.bg, globalStyles.bgColor]}>
-        <Dishes title='Dishes' data={dishes} map={dishesmap} type='dish' />
+        <Dishes data={dishes} map={dishesmap} type='dish' />
         <StatusBar style='dark' />
       </SafeAreaView>
     </SafeAreaProvider>

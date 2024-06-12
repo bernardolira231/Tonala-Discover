@@ -4,7 +4,7 @@ import { Text, View } from 'react-native'
 const HandicraftScreen = () => {
   return (
     <View>
-      <Text>Fashion Screen</Text>
+      <Text>Handicraft Screen</Text>
     </View>
   )
 }
