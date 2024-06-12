@@ -66,7 +66,13 @@ function MyStack () {
       <InfoStack.Screen
         name='DishDetails'
         component={DishDetails}
-        options={{ headerShown: false }}
+        options={{
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          },
+          headerTitle: '',
+          headerBackTitle: 'Back'
+        }}
       />
     </InfoStack.Navigator>
   )
@@ -83,7 +89,13 @@ function TheHandicraftStack () {
       <HandicraftStack.Screen
         name='HandicraftDetails'
         component={DetailsScreen}
-        options={{ headerShown: false }}
+        options={{
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          },
+          headerTitle: '',
+          headerBackTitle: 'Back'
+        }}
       />
     </HandicraftStack.Navigator>
   )
