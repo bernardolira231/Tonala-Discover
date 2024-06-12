@@ -49,7 +49,24 @@ function HomeStackScreen () {
       <HomeStack.Screen
         name='DishDetails'
         component={DishDetails}
-        options={{ headerShown: false }}
+        options={{
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          },
+          headerTitle: '',
+          headerBackTitle: 'Back'
+        }}
+      />
+      <HomeStack.Screen
+        name='HandicraftDetails'
+        component={DetailsScreen}
+        options={{
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          },
+          headerTitle: '',
+          headerBackTitle: 'Back'
+        }}
       />
     </HomeStack.Navigator>
   )
