@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center'
   },
   title: {
-    fontSize: '30px',
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#8B4513'
   },
@@ -20,13 +20,13 @@ export const styles = StyleSheet.create({
     marginTop: 24
   },
   subtitle: {
-    fontSize: '24px',
+    fontSize: 24,
     fontWeight: '600',
     color: '#8B4513',
     marginBottom: 12
   },
   ingredients: {
-    fontSize: '16px',
+    fontSize: 16,
     color: '#A0522D',
     marginBottom: 8
   },
@@ -40,6 +40,7 @@ export const styles = StyleSheet.create({
   firstpart: {
   },
   secondpart: {
-    marginTop: 24
+    marginTop: 24,
+    marginBottom: 50
   }
 })

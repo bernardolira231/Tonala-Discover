@@ -18,7 +18,7 @@ import logo from './assets/img/logo.png'
 const Tab = createBottomTabNavigator()
 const InfoStack = createStackNavigator()
 const HomeStack = createStackNavigator()
-const HandicraftStack = createStackNavigator()
+const FashionStack = createStackNavigator()
 
 function HomeStackScreen () {
   return (
@@ -78,7 +78,12 @@ function MyStack () {
       <InfoStack.Screen
         name='DishesScreen'
         component={MainDishes}
-        options={{ headerShown: false }}
+        options={{
+          headerTitle: 'Dishes',
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          }
+        }}
       />
       <InfoStack.Screen
         name='DishDetails'
@@ -95,15 +100,20 @@ function MyStack () {
   )
 }
 
-function TheHandicraftStack () {
+function TheFashionStack () {
   return (
-    <HandicraftStack.Navigator initialRouteName='HandicraftScreen'>
-      <HandicraftStack.Screen
+    <FashionStack.Navigator initialRouteName='HandicraftScreen'>
+      <FashionStack.Screen
         name='HandicraftScreen'
-        component={HandicraftScreen}
-        options={{ headerShown: false }}
+        component={FashionScreen}
+        options={{
+          headerTitle: 'Fashion',
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          }
+        }}
       />
-      <HandicraftStack.Screen
+      <FashionStack.Screen
         name='HandicraftDetails'
         component={DetailsScreen}
         options={{
@@ -114,7 +124,7 @@ function TheHandicraftStack () {
           headerBackTitle: 'Back'
         }}
       />
-    </HandicraftStack.Navigator>
+    </FashionStack.Navigator>
   )
 }
 
@@ -150,7 +160,7 @@ function MyTabs () {
       />
       <Tab.Screen
         name='Fashion'
-        component={FashionScreen}
+        component={TheFashionStack}
         options={{
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
@@ -159,10 +169,7 @@ function MyTabs () {
               color={color}
             />
           ),
-          headerTitle: 'Fashion',
-          headerStyle: {
-            backgroundColor: theme.colors.bgColor
-          }
+          headerShown: false
         }}
       />
       <Tab.Screen
@@ -188,15 +195,12 @@ function MyTabs () {
               color={color}
             />
           ),
-          headerTitle: 'Dishes',
-          headerStyle: {
-            backgroundColor: theme.colors.bgColor
-          }
+          headerShown: false
         }}
       />
       <Tab.Screen
         name='Handicraft'
-        component={TheHandicraftStack}
+        component={HandicraftScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome6 name='jar' size={30} color={color} />

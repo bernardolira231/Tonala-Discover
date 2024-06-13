@@ -14,7 +14,7 @@ import bannerImage from '../../../assets/img/banner.webp'
 
 const Home = () => {
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider style={styles.bg2}>
       <SafeAreaView style={[styles.bg, globalStyles.bgColor]}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Banner image={bannerImage} header='Thank you for visiting us, we hope you come back soon!' />
