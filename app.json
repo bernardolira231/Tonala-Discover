@@ -30,6 +30,12 @@
         "projectId": "737aa82b-0243-4d1f-98ef-8d0e7cb74c54"
       }
     },
-    "owner": "bernardolira231"
+    "owner": "bernardolira231",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/737aa82b-0243-4d1f-98ef-8d0e7cb74c54"
+    }
   }
 }
