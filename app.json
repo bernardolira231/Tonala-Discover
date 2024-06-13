@@ -22,9 +22,6 @@
       "package": "com.bernardolira231.Mestizarte",
       "versionCode": 1
     },
-    "assetsBundlePatterns": [
-      "assets/*"
-    ],
     "web": {
       "favicon": "./assets/favicon.png"
     },
