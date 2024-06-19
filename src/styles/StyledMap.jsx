@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
     height: 300,
     borderRadius: 15,
     overflow: 'hidden',
-    marginTop: 30,
     marginBottom: 90
   },
   map: {
