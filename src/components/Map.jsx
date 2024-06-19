@@ -3,6 +3,7 @@ import { View, Text } from 'react-native'
 import MapView, { Marker, Polygon, Callout } from 'react-native-maps'
 import { region, tonalaCoordinates, tonalaCenter, marketCoordinates } from '../constants/mapConst'
 import { styles } from '../styles/StyledMap'
+import MyMarker from './ModernMarker.jsx'
 
 const TonalaMap = () => {
   return (
@@ -11,15 +12,7 @@ const TonalaMap = () => {
         style={styles.map}
         initialRegion={region}
       >
-        <Marker coordinate={marketCoordinates}>
-          <Callout
-            style={{ width: 100, height: 50 }}
-          >
-            <View>
-              <Text>Handicraft Market</Text>
-            </View>
-          </Callout>
-        </Marker>
+        <MyMarker coordinate={marketCoordinates} title='Handicraft Market' description='Handicraft Market asdasdasdasds' />
         <Marker coordinate={tonalaCenter}>
           <Callout
             style={{ width: 100, height: 50 }}

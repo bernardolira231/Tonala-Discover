@@ -16,20 +16,19 @@ export const tonalaCenter = {
 }
 
 export const tonalaCoordinates = [
-  { latitude: 20.641, longitude: -103.247 },
-  { latitude: 20.630, longitude: -103.233 },
-  { latitude: 20.618, longitude: -103.222 },
-  { latitude: 20.609, longitude: -103.218 },
-  { latitude: 20.599, longitude: -103.215 },
-  { latitude: 20.589, longitude: -103.213 },
-  { latitude: 20.580, longitude: -103.218 },
-  { latitude: 20.572, longitude: -103.224 },
-  { latitude: 20.563, longitude: -103.233 },
-  { latitude: 20.559, longitude: -103.245 },
-  { latitude: 20.565, longitude: -103.258 },
-  { latitude: 20.576, longitude: -103.267 },
-  { latitude: 20.587, longitude: -103.272 },
-  { latitude: 20.598, longitude: -103.276 },
-  { latitude: 20.611, longitude: -103.273 },
-  { latitude: 20.622, longitude: -103.265 }
+  { latitude: 20.611850, longitude: -103.275750 },
+  { latitude: 20.611836, longitude: -103.275092 },
+  { latitude: 20.611808, longitude: -103.274778 },
+  { latitude: 20.611828, longitude: -103.274720 },
+  { latitude: 20.611801, longitude: -103.274475 },
+  { latitude: 20.611805, longitude: -103.274169 },
+  { latitude: 20.611770, longitude: -103.273840 },
+  { latitude: 20.611814, longitude: -103.273070 },
+  { latitude: 20.611797, longitude: -103.272897 },
+  { latitude: 20.611771, longitude: -103.264232 },
+  { latitude: 20.611816, longitude: -103.263785 },
+  { latitude: 20.611756, longitude: -103.263179 },
+  { latitude: 20.611820, longitude: -103.259976 },
+  { latitude: 20.611958, longitude: -103.259338 },
+  { latitude: 20.611841, longitude: -103.257308 }
 ]
