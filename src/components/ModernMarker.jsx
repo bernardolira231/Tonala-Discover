@@ -9,7 +9,7 @@ const ModernMarker = ({ coordinate, title, description }) => {
       <Callout style={styles.callout}>
         <View style={styles.calloutContainer}>
           <Image
-            source={{ uri: 'https://example.com/image.jpg' }} // URL de la imagen
+            source={{ uri: 'https://example.com/image.jpg' }}
             style={styles.calloutImage}
           />
           <View style={styles.calloutTextContainer}>

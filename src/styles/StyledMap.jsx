@@ -5,8 +5,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: 300,
     borderRadius: 15,
-    overflow: 'hidden',
-    marginBottom: 90
+    overflow: 'hidden'
   },
   map: {
     ...StyleSheet.absoluteFillObject
