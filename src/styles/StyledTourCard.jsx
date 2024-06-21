@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import theme from './theme.js'
 
 export const styles = StyleSheet.create({
   card: {
@@ -13,18 +14,37 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
     marginVertical: 10,
-    color: '#000'
+    color: '#A0522D'
+  },
+  description: {
+    color: '#A0522D'
   },
   sectionInfo: {
     flexDirection: 'row',
-    justifyContent: 'space-around'
+    justifyContent: 'flex-start'
   },
   iconSection: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 10
+    marginTop: 10,
+    marginRight: 15
   },
   icon: {
-    marginRight: 10
+    marginRight: 5
+  },
+  icontext: {
+    color: '#A0522D'
+  },
+  button: {
+    backgroundColor: theme.colors.primary,
+    paddingVertical: 8,
+    marginTop: 16,
+    paddingHorizontal: 12,
+    borderRadius: 5,
+    alignSelf: 'flex-start'
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 14
   }
 })
