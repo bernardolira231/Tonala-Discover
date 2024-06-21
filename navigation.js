@@ -11,6 +11,7 @@ import DetailsScreen from './src/screens/detailScreen/Details.jsx'
 import CameraScreen from './src/screens/cameraScreen/CameraScreen.jsx'
 import FashionScreen from './src/screens/fashionScreen/FashionScreen.jsx'
 import HandicraftScreen from './src/screens/handicraftScreen/HandicraftScreen.jsx'
+import TourScreen from './src/screens/tourScreen/TourScreen.jsx'
 import { styles } from './src/styles/stylesButtonBar.js'
 import theme from './src/styles/theme.js'
 import logo from './assets/img/logo.png'
@@ -60,6 +61,17 @@ function HomeStackScreen () {
       <HomeStack.Screen
         name='HandicraftDetails'
         component={DetailsScreen}
+        options={{
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          },
+          headerTitle: '',
+          headerBackTitle: 'Back'
+        }}
+      />
+      <HomeStack.Screen
+        name='Tour'
+        component={TourScreen}
         options={{
           headerStyle: {
             backgroundColor: theme.colors.bgColor
