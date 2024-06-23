@@ -18,7 +18,7 @@ const TourCard = ({ data }) => {
           </View>
           <View style={styles.iconSection}>
             <MaterialIcons name='access-time' size={24} color='#A0522D' style={styles.icon} />
-            <Text style={styles.icontext}>{data.time}</Text>
+            <Text style={styles.icontext}>{data.duration}</Text>
           </View>
         </View>
         <View>

@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/fb/76/de.jpg",
+        "title": "Tour Tonalá - Tlaquepaque",
+        "description": "Visit the most traditional neighborhoods of Guadalajara, where you can find the best crafts and art in the region.",
+        "price": "1,290.00 MXN",
+        "duration": "6 hours"
+    
+    },
+    {
+        
+        "id": 2,
+        "image": "https://media-cdn.tripadvisor.com/media/photo-s/1a/2d/7d/5d/caption.jpg",
+        "title": "Tour Tequila Express",
+        "description": "Enjoy a train ride to the town of Tequila, where you can visit a distillery and learn about the process of making tequila.",
+        "price": "1,500.00 MXN",
+        "duration": "8 hours"
+    }
+
+]
