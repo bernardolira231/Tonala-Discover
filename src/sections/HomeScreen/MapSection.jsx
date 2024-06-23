@@ -1,8 +1,8 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import Map from './Map.jsx'
-import { styles } from '../styles/StyledMapSection.jsx'
+import Map from '../../components/Map.jsx'
+import { styles } from '../../styles/StyledMapSection.jsx'
 
 const MapSection = () => {
   const navigation = useNavigation()

@@ -9,7 +9,7 @@ import {
 import { AntDesign } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 import { styles } from '../styles/StyledCarousel.jsx'
-import CarouselItem from '../components/CarouselItem.jsx'
+import CarouselItem from './CarouselItem.jsx'
 
 const { width } = Dimensions.get('window')
 
