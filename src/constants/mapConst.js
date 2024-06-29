@@ -1,8 +1,8 @@
 export const region = {
   latitude: 20.6231,
   longitude: -103.2436,
-  latitudeDelta: 0.05,
-  longitudeDelta: 0.05
+  latitudeDelta: 0.03,
+  longitudeDelta: 0.03
 }
 
 export const marketCoordinates = {
