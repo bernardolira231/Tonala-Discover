@@ -3,8 +3,7 @@ import theme from './theme'
 
 export const styles = StyleSheet.create({
   container: {
-    paddingTop: 20,
-    marginBottom: 90
+    paddingTop: 20
   },
   h1: {
     fontSize: 24,
