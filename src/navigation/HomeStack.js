@@ -45,7 +45,8 @@ const HomeStack = () => {
             backgroundColor: theme.colors.bgColor
           },
           headerTitle: '',
-          headerBackTitle: 'Back'
+          headerBackTitleVisible: false,
+          presentation: 'modal'
         }}
       />
       <Stack.Screen
@@ -56,7 +57,8 @@ const HomeStack = () => {
             backgroundColor: theme.colors.bgColor
           },
           headerTitle: '',
-          headerBackTitle: 'Back'
+          headerBackTitleVisible: false,
+          presentation: 'modal'
         }}
       />
       <Stack.Screen
