@@ -1,8 +1,8 @@
 import React from 'react'
-import Navigation from './navigation'
+import AppNavigation from './src/navigation/NavigationContainer'
 
 export default function App () {
   return (
-    <Navigation />
+    <AppNavigation />
   )
 }

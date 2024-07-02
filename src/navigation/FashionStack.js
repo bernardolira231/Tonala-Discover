@@ -1,0 +1,37 @@
+import React from 'react'
+import { createStackNavigator } from '@react-navigation/stack'
+import FashionScreen from '../screens/fashionScreen/FashionScreen'
+import DetailsScreen from '../screens/detailScreen/Details'
+import theme from '../styles/theme'
+
+const Stack = createStackNavigator()
+
+const FashionStack = () => {
+  return (
+    <Stack.Navigator initialRouteName='FashionScreen'>
+      <Stack.Screen
+        name='FashionScreen'
+        component={FashionScreen}
+        options={{
+          headerTitle: 'Fashion',
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          }
+        }}
+      />
+      <Stack.Screen
+        name='HandicraftDetails'
+        component={DetailsScreen}
+        options={{
+          headerStyle: {
+            backgroundColor: theme.colors.bgColor
+          },
+          headerTitle: '',
+          headerBackTitle: 'Back'
+        }}
+      />
+    </Stack.Navigator>
+  )
+}
+
+export default FashionStack
