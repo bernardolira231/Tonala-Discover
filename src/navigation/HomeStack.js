@@ -6,6 +6,7 @@ import MainDishes from '../screens/dishesScreen/DishesScreen'
 import DishDetails from '../screens/dishDetailScreen/DishDetails'
 import DetailsScreen from '../screens/detailScreen/Details'
 import TourScreen from '../screens/tourScreen/TourScreen'
+import TourDetailScreen from '../screens/tourDetailScreen/TourDetailScreen'
 import theme from '../styles/theme'
 import logo from '../../assets/img/logo.png'
 
@@ -70,6 +71,13 @@ const HomeStack = () => {
           },
           headerTitle: '',
           headerBackTitle: 'Back'
+        }}
+      />
+      <Stack.Screen
+        name='TourDetails'
+        component={TourDetailScreen}
+        options={{
+          presentation: 'modal'
         }}
       />
     </Stack.Navigator>

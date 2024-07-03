@@ -13,10 +13,7 @@ const InfoStack = () => {
         name='DishesScreen'
         component={MainDishes}
         options={{
-          headerTitle: 'Dishes',
-          headerStyle: {
-            backgroundColor: theme.colors.bgColor
-          }
+          headerTitle: 'Dishes'
         }}
       />
       <Stack.Screen

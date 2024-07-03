@@ -25,7 +25,7 @@ const TabNavigator = () => {
         component={HomeStack}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name='home' size={30} color={color} />
+            <MaterialCommunityIcons name='home' size={25} color={color} />
           )
         }}
       />
@@ -36,7 +36,7 @@ const TabNavigator = () => {
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
               name='tshirt-crew'
-              size={30}
+              size={25}
               color={color}
             />
           )
@@ -49,7 +49,7 @@ const TabNavigator = () => {
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
               name='food-fork-drink'
-              size={30}
+              size={25}
               color={color}
             />
           )
@@ -60,7 +60,7 @@ const TabNavigator = () => {
         component={HandicraftScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <FontAwesome6 name='jar' size={30} color={color} />
+            <FontAwesome6 name='jar' size={25} color={color} />
           )
         }}
       />
