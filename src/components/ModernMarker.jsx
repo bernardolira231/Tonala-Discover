@@ -3,7 +3,7 @@ import { View, Text, Image } from 'react-native'
 import { Marker, Callout } from 'react-native-maps'
 import { styles } from '../styles/StyledModernMarker'
 
-const ModernMarker = ({ coordinate, title, description }) => {
+const ModernMarker = ({ coordinate, title, description, image }) => {
   return (
     <Marker coordinate={coordinate}>
       <Callout style={styles.callout}>
