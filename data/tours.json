@@ -3,9 +3,10 @@
         "id": 1,
         "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/fb/76/de.jpg",
         "title": "Tour Tonalá - Tlaquepaque",
-        "description": "Visit the most traditional neighborhoods of Guadalajara, where you can find the best crafts and art in the region.",
+        "shortdescription": "Visit the most traditional neighborhoods of Guadalajara, where you can find the best crafts and art in the region.",
         "price": "1,290.00 MXN",
-        "duration": "6 hours"
+        "duration": "6 hours",
+        "description": "This tour will take you to the most traditional neighborhoods of Guadalajara, where you can find the best crafts and art in the region. You will visit the towns of Tonalá and Tlaquepaque, where you can find a wide variety of crafts, from pottery to blown glass. You will also have the opportunity to visit the Regional Ceramic Museum, where you can learn about the history of pottery in the region. The tour includes transportation, a guide, and entrance fees to the museum. It does not include food or drinks. The tour lasts approximately 6 hours."
     
     },
     {
@@ -13,9 +14,10 @@
         "id": 2,
         "image": "https://media-cdn.tripadvisor.com/media/photo-s/1a/2d/7d/5d/caption.jpg",
         "title": "Tour Tequila Express",
-        "description": "Enjoy a train ride to the town of Tequila, where you can visit a distillery and learn about the process of making tequila.",
+        "shortdescription": "Enjoy a train ride to the town of Tequila, where you can visit a distillery and learn about the process of making tequila.",
         "price": "1,500.00 MXN",
-        "duration": "8 hours"
+        "duration": "8 hours",
+        "description": "This tour will take you on a train ride to the town of Tequila, where you can visit a distillery and learn about the process of making tequila. You will have the opportunity to taste different types of tequila and learn about the history of this traditional Mexican drink. The tour includes transportation, a guide, and entrance fees to the distillery. It does not include food or drinks. The tour lasts approximately 8 hours."
     }
 
 ]
