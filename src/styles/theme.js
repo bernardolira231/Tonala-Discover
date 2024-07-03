@@ -5,7 +5,7 @@ const theme = {
     // backgroundColor: '#F2F0F0',
     // fourthColor: '#A63E26',
     // fifthColor: '#A68481'
-    bgColor: '#FFF4E1',
+    bgColor: '#FFFFFF',
     primary: '#F28D35',
     secondary: '#E94F37',
     accent: '#76B041',
