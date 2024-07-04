@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from 'react'
-import { Text, ScrollView, View, Image, StyleSheet } from 'react-native'
+import { Text, ScrollView, View, StyleSheet } from 'react-native'
 import { useNavigation, useRoute } from '@react-navigation/native'
+import MySwiper from '../../components/Swiper'
 
 const TourDetailScreen = () => {
   const navigation = useNavigation()
@@ -18,12 +19,24 @@ const TourDetailScreen = () => {
     <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
       <View>
         <Text>{data.title}</Text>
+        <Text>{data.shortphrase}</Text>
       </View>
-      <View style={styles.imageContainer}>
-        <Image source={{ uri: data.image }} style={styles.image} />
+      <View style={styles.swiper}>
+        <MySwiper images={data.images} />
       </View>
       <View>
+        <Text>Route Description</Text>
         <Text>{data.description}</Text>
+      </View>
+      <View style={styles.detailSection}>
+        <View style={styles.priceSection}>
+          <Text>Price</Text>
+          <Text>{`${data.price} per person`}</Text>
+        </View>
+        <View style={styles.durationSection}>
+          <Text>Duration</Text>
+          <Text>{data.duration}</Text>
+        </View>
       </View>
     </ScrollView>
   )
@@ -43,5 +56,18 @@ const styles = StyleSheet.create({
   image: {
     width: '800',
     height: 300
+  },
+  swiper: {
+    paddingBottom: 25
+  },
+  detailSection: {
+    flexDirection: 'row',
+    gap: 20
+  },
+  priceSection: {
+    flex: 1
+  },
+  durationSection: {
+    flex: 1
   }
 })

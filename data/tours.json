@@ -1,8 +1,13 @@
 [
     {
         "id": 1,
-        "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/fb/76/de.jpg",
+        "images": [
+            "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/fb/76/de.jpg",
+            "https://cdn.mexicodestinos.com/tours/tour-a-tlaquepaque-y-tonala-princ-min.jpg",
+            "https://tapatiotours.com/wp-content/uploads/2020/07/Guadalajara_Tonala_Tlaquepaque-1024x574.jpg"
+        ],
         "title": "Tour Tonalá - Tlaquepaque",
+        "shortphrase": "Visit the most traditional neighborhoods of Guadalajara.",
         "shortdescription": "Visit the most traditional neighborhoods of Guadalajara, where you can find the best crafts and art in the region.",
         "price": "1,290.00 MXN",
         "duration": "6 hours",
@@ -12,8 +17,13 @@
     {
         
         "id": 2,
-        "image": "https://media-cdn.tripadvisor.com/media/photo-s/1a/2d/7d/5d/caption.jpg",
+        "images": [
+            "https://media-cdn.tripadvisor.com/media/photo-s/1a/2d/7d/5d/caption.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/1a/2d/7d/5d/caption.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/1a/2d/7d/5d/caption.jpg"
+        ],
         "title": "Tour Tequila Express",
+        "shortphrase": "Enjoy a train ride to the town of Tequila.",
         "shortdescription": "Enjoy a train ride to the town of Tequila, where you can visit a distillery and learn about the process of making tequila.",
         "price": "1,500.00 MXN",
         "duration": "8 hours",

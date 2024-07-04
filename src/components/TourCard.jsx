@@ -9,7 +9,7 @@ const TourCard = ({ data }) => {
   const navigation = useNavigation()
   return (
     <Card style={styles.card}>
-      <Card.Cover source={{ uri: data.image }} />
+      <Card.Cover source={{ uri: data.images[0] }} />
       <Card.Content>
         <Text style={styles.h1}>{data.title}</Text>
         <Text style={styles.description}>{data.shortdescription}</Text>
