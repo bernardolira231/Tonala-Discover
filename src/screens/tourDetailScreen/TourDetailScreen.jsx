@@ -29,11 +29,11 @@ const TourDetailScreen = () => {
         <Text>{data.description}</Text>
       </View>
       <View style={styles.detailSection}>
-        <View style={styles.priceSection}>
+        <View>
           <Text>Price</Text>
           <Text>{`${data.price} per person`}</Text>
         </View>
-        <View style={styles.durationSection}>
+        <View>
           <Text>Duration</Text>
           <Text>{data.duration}</Text>
         </View>
