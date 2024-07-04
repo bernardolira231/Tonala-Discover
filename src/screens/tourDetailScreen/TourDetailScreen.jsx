@@ -63,11 +63,5 @@ const styles = StyleSheet.create({
   detailSection: {
     flexDirection: 'row',
     gap: 20
-  },
-  priceSection: {
-    flex: 1
-  },
-  durationSection: {
-    flex: 1
   }
 })
