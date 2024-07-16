@@ -1,24 +1,25 @@
 import React from 'react'
-import Map from '../../components/Map.jsx'
-import MarkerInfoCard from '../../components/MarkerInfoCard.jsx'
-import { markers } from '../../constants/markers.js'
+// import { markers } from '../../constants/markers.js'
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { styles } from '../../styles/StyledMapSection.jsx'
+import Card from '../../components/Card.jsx'
+import places from '../../../data/places.json'
 
 const MapSection = () => {
   const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <Text style={styles.h1}>Map</Text>
-      <Map />
       <View>
         <ScrollView style={styles.infoContainer}>
-          {markers.map((marker, index) => (
-            <MarkerInfoCard
+          {places.map((place, index) => (
+            <Card
               key={index}
-              title={marker.title}
-              description={marker.description}
+              images={place.images}
+              heading={place.heading}
+              subheading={place.subheading}
+              stars={place.stars}
             />
           ))}
         </ScrollView>
