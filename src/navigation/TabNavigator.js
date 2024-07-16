@@ -39,7 +39,8 @@ const TabNavigator = () => {
               size={25}
               color={color}
             />
-          )
+          ),
+          tabBarActiveTintColor: '#783d97'
         }}
       />
       <Tab.Screen
@@ -61,7 +62,8 @@ const TabNavigator = () => {
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome6 name='jar' size={25} color={color} />
-          )
+          ),
+          tabBarActiveTintColor: '#e00072'
         }}
       />
     </Tab.Navigator>
