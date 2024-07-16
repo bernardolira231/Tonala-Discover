@@ -14,8 +14,8 @@ export const styles = StyleSheet.create({
   },
   banner: {
     width: '100%',
-    height: 200,
-    borderRadius: 5
+    height: 200
+    // borderRadius: 5
   },
   textContainer: {
     position: 'absolute',
