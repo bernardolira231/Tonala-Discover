@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "images": [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/fb/76/de.jpg",
+            "https://cdn.mexicodestinos.com/tours/tour-a-tlaquepaque-y-tonala-princ-min.jpg",
+            "https://tapatiotours.com/wp-content/uploads/2020/07/Guadalajara_Tonala_Tlaquepaque-1024x574.jpg"
+      ],
+      "heading": "Cozy Apartment in Downtown",
+      "subheading": 120,
+      "stars": 4.8
+    },
+    {
+      "id": 2,
+      "images": [
+        "https://example.com/image4.jpg",
+        "https://example.com/image5.jpg",
+        "https://example.com/image6.jpg"
+      ],
+      "heading": "Luxury Villa with Pool",
+      "subheading": 350,
+      "stars": 4.9
+    },
+    {
+      "id": 3,
+      "images": [
+        "https://example.com/image7.jpg",
+        "https://example.com/image8.jpg",
+        "https://example.com/image9.jpg"
+      ],
+      "heading": "Charming House near Beach",
+      "subheading": 200,
+      "stars": 4.7
+    },
+    {
+      "id": 4,
+      "images": [
+        "https://example.com/image10.jpg",
+        "https://example.com/image11.jpg",
+        "https://example.com/image12.jpg"
+      ],
+      "heading": "Modern Loft in City Center",
+      "subheading": 150,
+      "stars": 4.6
+    },
+    {
+      "id": 5,
+      "images": [
+        "https://example.com/image13.jpg",
+        "https://example.com/image14.jpg",
+        "https://example.com/image15.jpg"
+      ],
+      "heading": "Spacious Cottage in Countryside",
+      "subheading": 180,
+      "stars": 4.5
+    }
+  ]
+  
