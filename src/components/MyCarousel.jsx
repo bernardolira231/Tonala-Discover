@@ -13,7 +13,7 @@ import CarouselItem from './CarouselItem.jsx'
 
 const { width } = Dimensions.get('window')
 
-const TryCarousel = ({ header, data, screen, type, map, extraField = [] }) => {
+const TryCarousel = ({ data, screen, type, map, extraField = [] }) => {
   const navigation = useNavigation()
   const scrollX = React.useRef(new Animated.Value(0)).current
   const limitedData = [
@@ -45,7 +45,6 @@ const TryCarousel = ({ header, data, screen, type, map, extraField = [] }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.h1}>{header}</Text>
       <Animated.FlatList
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { x: scrollX } } }],

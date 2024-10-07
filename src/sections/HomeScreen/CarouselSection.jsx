@@ -8,8 +8,8 @@ import { fashionsmap, extraFields } from '../../constants/fashionConst.js'
 const CarouselSection = () => {
   return (
     <View>
-      <MyCarousel header='Dishes' data={dishes} screen='Dishes' type='dish' />
-      <MyCarousel header='Fashion' data={fashions} screen='Fashion' type='fashion' map={fashionsmap} extraField={extraFields} />
+      <MyCarousel data={dishes} screen='Dishes' type='dish' />
+      <MyCarousel data={fashions} screen='Fashion' type='fashion' map={fashionsmap} extraField={extraFields} />
     </View>
   )
 }

@@ -8,7 +8,6 @@ import DetailsScreen from '../screens/detailScreen/Details'
 import TourScreen from '../screens/tourScreen/TourScreen'
 import TourDetailScreen from '../screens/tourDetailScreen/TourDetailScreen'
 import theme from '../styles/theme'
-import logo from '../../assets/img/logo.png'
 
 const Stack = createStackNavigator()
 
@@ -19,18 +18,19 @@ const HomeStack = () => {
         name='HomePage'
         component={HomePage}
         options={{
-          headerStyle: {
-            backgroundColor: theme.colors.bgColor,
-            shadowColor: 'transparent',
-            shadowOpacity: 0
-          },
-          headerTitle: () => (
-            <Image
-              style={{ width: 100, height: 40 }}
-              source={logo}
-              resizeMode='contain'
-            />
-          )
+          headerShown: false
+          // headerStyle: {
+          //   backgroundColor: theme.colors.bgColor,
+          //   shadowColor: 'transparent',
+          //   shadowOpacity: 0
+          // },
+          // headerTitle: () => (
+          //   <Image
+          //     style={{ width: 100, height: 40 }}
+          //     source={logo}
+          //     resizeMode='contain'
+          //   />
+          // )
         }}
       />
       <Stack.Screen

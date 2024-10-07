@@ -1,28 +1,73 @@
-import React from 'react'
-import { View, StyleSheet, Image, FlatList, Text, Dimensions } from 'react-native'
+import {
+  View,
+  StyleSheet,
+  Image,
+  FlatList,
+  Text,
+  Dimensions,
+  Pressable
+} from 'react-native'
+import { useState, useRef } from 'react'
+import { Ionicons } from '@expo/vector-icons'
 
 const HEIGHT = 225
 const WIDTH = Dimensions.get('window').width
 
-export default function Card ({ images = [], heading, subheading, stars, style, ...rest }) {
+export default function Card ({
+  images,
+  heading,
+  subheading,
+  stars,
+  favorite,
+  onPress,
+  style,
+  ...rest
+}) {
+  const flatListRef = useRef(null)
+  const viewConfigRef = { viewAreaCoveragePercentThreshold: 95 }
+  const [activeIndex, setActiveIndex] = useState(0)
+  const onViewRef = useRef(({ changed }) => {
+    if (changed[0].isViewable) {
+      setActiveIndex(changed[0].index)
+    }
+  })
+  const [favoriteItem, setFavoriteItem] = useState(favorite)
+
+  const handleFavoriteItemClicked = () => {
+    setFavoriteItem(!favoriteItem)
+    console.log('make some backend request')
+  }
+
   return (
     <View style={[styles.cardContainer, style]} {...rest}>
-      {/* Images */}
-      {images.length > 0 && (
-        <FlatList
-          data={images}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          keyExtractor={(item) => item}
-          snapToAlignment='center'
-          pagingEnabled
-          renderItem={({ item }) => (
-            <View style={styles.imageContainer}>
-              <Image style={styles.image} source={{ uri: item }} />
-            </View>
-          )}
+      <Pressable
+        onPress={handleFavoriteItemClicked}
+        style={styles.favoriteContainer}
+      >
+        <Ionicons
+          name={favoriteItem ? 'heart' : 'heart-outline'}
+          size={24}
+          color={favoriteItem ? '#FF5A5F' : 'white'}
         />
-      )}
+      </Pressable>
+      {/* Images */}
+      <FlatList
+        data={images}
+        horizontal
+        showsHorizontalScrollIndicat
+        or={false}
+        keyExtractor={(item) => item}
+        ref={(ref) => (flatListRef.current = ref)}
+        snapToAlignment='center'
+        pagingEnabled
+        viewabilityConfig={viewConfigRef}
+        onViewableItemsChanged={onViewRef.current}
+        renderItem={({ item }) => (
+          <Pressable onPress={onPress} style={styles.imageContainer}>
+            <Image style={styles.image} source={{ uri: item }} />
+          </Pressable>
+        )}
+      />
       {/* Dot Container */}
       {images.length > 1 && (
         <View style={styles.dotContainer}>
@@ -31,7 +76,7 @@ export default function Card ({ images = [], heading, subheading, stars, style, 
               key={index}
               style={[
                 {
-                  opacity: index === 0 ? 1 : 0.5
+                  opacity: index === activeIndex ? 1 : 0.5
                 },
                 styles.dot
               ]}
@@ -39,14 +84,16 @@ export default function Card ({ images = [], heading, subheading, stars, style, 
           ))}
         </View>
       )}
+
       {/* Text Container */}
-      <View style={styles.textContainer}>
+      <Pressable onPress={onPress} style={styles.textContainer}>
         <View style={styles.starContainer}>
-          <Text style={styles.starText}>⭐ {stars}</Text>
+          <Ionicons name='star' size={16} color='#FF5A5F' />
+          <Text style={styles.starText}>{stars}</Text>
         </View>
         <Text style={styles.heading}>{heading}</Text>
         <Text style={styles.subheading}>${subheading}/night</Text>
-      </View>
+      </Pressable>
     </View>
   )
 }
@@ -55,16 +102,19 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginTop: 20,
     paddingHorizontal: 30,
-    width: WIDTH,
+    width: WIDTH - 30,
+    backgroundColor: '#f1e4ce',
     borderRadius: 10,
-    backgroundColor: '#fff',
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 8,
-    elevation: 5
+    paddingBottom: 10
   },
-  imageContainer: { width: WIDTH - 60 },
+  favoriteContainer: {
+    position: 'absolute',
+    top: 10,
+    right: 40,
+    zIndex: 10,
+    padding: 10
+  },
+  imageContainer: { width: WIDTH - 90 },
   image: {
     width: '100%',
     height: HEIGHT,
@@ -84,9 +134,9 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: 'white'
   },
-  textContainer: { marginTop: 10, paddingHorizontal: 10 },
-  starContainer: { flexDirection: 'row', alignItems: 'center' },
+  textContainer: { marginTop: 10 },
+  starContainer: { flexDirection: 'row' },
   starText: { marginLeft: 5 },
-  heading: { fontSize: 20, fontWeight: 'bold' },
-  subheading: { fontSize: 18, marginTop: 5, color: '#555' }
+  heading: { fontSize: 20 },
+  subheading: { fontSize: 18, marginTop: 5 }
 })

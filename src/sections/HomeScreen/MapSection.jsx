@@ -10,9 +10,16 @@ const MapSection = () => {
   const navigation = useNavigation()
   return (
     <View style={styles.container}>
-      <Text style={styles.h1}>Map</Text>
-      <View>
+      <View style={{
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+      >
+        <TouchableOpacity onPress={() => navigation.navigate('Tour')} style={styles.button}>
+          <Text>Turist Guides</Text>
+        </TouchableOpacity>
         <ScrollView style={styles.infoContainer}>
+          <Text>Popular Destinations</Text>
           {places.map((place, index) => (
             <Card
               key={index}
@@ -24,11 +31,7 @@ const MapSection = () => {
           ))}
         </ScrollView>
       </View>
-      <View>
-        <TouchableOpacity onPress={() => navigation.navigate('Tour')} style={styles.button}>
-          <Text>Show More</Text>
-        </TouchableOpacity>
-      </View>
+      <View />
     </View>
   )
 }
