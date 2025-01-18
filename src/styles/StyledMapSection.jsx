@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
+  heading: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10
+  },
+
   container: {
     flex: 1,
     padding: 10
