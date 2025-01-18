@@ -1,37 +1,41 @@
-import React from 'react'
-// import { markers } from '../../constants/markers.js'
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
+import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { styles } from '../../styles/StyledMapSection.jsx'
-import Card from '../../components/Card.jsx'
 import places from '../../../data/places.json'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
+import Swiper from 'react-native-swiper'
 
 const MapSection = () => {
   const navigation = useNavigation()
+  const [visibleItems] = useState(4)
   return (
     <View style={styles.container}>
-      <View style={{
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
-      >
-        <TouchableOpacity onPress={() => navigation.navigate('Tour')} style={styles.button}>
-          <Text>Turist Guides</Text>
-        </TouchableOpacity>
-        <ScrollView style={styles.infoContainer}>
-          <Text>Popular Destinations</Text>
-          {places.map((place, index) => (
-            <Card
-              key={index}
-              images={place.images}
-              heading={place.heading}
-              subheading={place.subheading}
-              stars={place.stars}
-            />
-          ))}
-        </ScrollView>
+      <View style={styles.gridContainer}>
+        {places.slice(0, visibleItems).map((item) => (
+          <View key={item.id} style={styles.card}>
+            {/* Swiper para múltiples imágenes */}
+            <Swiper
+              style={styles.swiper}
+              showsPagination
+              dotStyle={styles.dot}
+              activeDotStyle={styles.activeDot}
+            >
+              {item.images.map((image, index) => (
+                <Image key={index} source={{ uri: image }} style={styles.image} />
+              ))}
+            </Swiper>
+            <View style={styles.textContainer}>
+              <Text style={styles.title}>{item.heading}</Text>
+              <Text style={styles.price}>${item.subheading}/night</Text>
+              <Text style={styles.stars}>⭐ {item.stars}</Text>
+            </View>
+          </View>
+        ))}
       </View>
-      <View />
+
+      <TouchableOpacity onPress={() => navigation.navigate('Tour')} style={styles.button}>
+        <Text style={styles.buttonText}>Show more</Text>
+      </TouchableOpacity>
     </View>
   )
 }
