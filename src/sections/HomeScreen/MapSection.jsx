@@ -10,6 +10,7 @@ const MapSection = () => {
   const [visibleItems] = useState(4)
   return (
     <View style={styles.container}>
+      <Text style={styles.heading}>Popular places</Text>
       <View style={styles.gridContainer}>
         {places.slice(0, visibleItems).map((item) => (
           <View key={item.id} style={styles.card}>
