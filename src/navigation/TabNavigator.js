@@ -5,6 +5,7 @@ import HomeStack from './HomeStack'
 import InfoStack from './InfoStack'
 import FashionStack from './FashionStack'
 import HandicraftScreen from '../screens/handicraftScreen/HandicraftScreen'
+import CameraScreen from '../screens/cameraScreen/CameraScreen'
 import theme from '../styles/theme'
 
 const Tab = createBottomTabNavigator()
@@ -64,6 +65,16 @@ const TabNavigator = () => {
             <FontAwesome6 name='jar' size={25} color={color} />
           ),
           tabBarActiveTintColor: '#e00072'
+        }}
+      />
+      <Tab.Screen
+        name='Camera'
+        component={CameraScreen}
+        options={{
+          tabBarButton: () => null,
+          tabBarStyle: {
+            display: 'none'
+          }
         }}
       />
     </Tab.Navigator>

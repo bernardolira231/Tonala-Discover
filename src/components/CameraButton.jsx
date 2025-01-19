@@ -9,7 +9,7 @@ const CameraButton = () => {
   return (
     <TouchableOpacity
       style={styles.floatingButton}
-      onPress={() => navigation.navigate('CameraScreen')}
+      onPress={() => navigation.navigate('Camera')}
     >
       <MaterialIcons name='camera-alt' size={30} color='white' />
     </TouchableOpacity>

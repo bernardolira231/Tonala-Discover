@@ -2,6 +2,7 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import FashionScreen from '../screens/fashionScreen/FashionScreen'
 import DetailsScreen from '../screens/detailScreen/Details'
+import CameraScreen from '../screens/cameraScreen/CameraScreen'
 import theme from '../styles/theme'
 
 const Stack = createStackNavigator()
@@ -28,6 +29,13 @@ const FashionStack = () => {
           },
           headerTitle: '',
           headerBackTitle: 'Back'
+        }}
+      />
+      <Stack.Screen
+        name='CameraScreen'
+        component={CameraScreen}
+        options={{
+          headerShown: false
         }}
       />
     </Stack.Navigator>

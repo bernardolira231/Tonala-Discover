@@ -14,7 +14,6 @@ const MapSection = () => {
       <View style={styles.gridContainer}>
         {places.slice(0, visibleItems).map((item) => (
           <View key={item.id} style={styles.card}>
-            {/* Swiper para múltiples imágenes */}
             <Swiper
               style={styles.swiper}
               showsPagination
