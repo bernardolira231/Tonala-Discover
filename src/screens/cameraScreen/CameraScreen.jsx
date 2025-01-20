@@ -1,24 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import { Text, View, StyleSheet, TouchableOpacity, Alert } from 'react-native'
 import { CameraView, Camera } from 'expo-camera'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useFocusEffect } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
 
 export default function App () {
   const navigation = useNavigation()
   const [hasPermission, setHasPermission] = useState(null)
   const [scanned, setScanned] = useState(false)
+  const [cameraKey, setCameraKey] = useState(0) // Agrega un key para forzar la re-renderización
 
   useEffect(() => {
     const getCameraPermissions = async () => {
       const { status } = await Camera.requestCameraPermissionsAsync()
       setHasPermission(status === 'granted')
     }
-
     getCameraPermissions()
   }, [])
 
+  // 🔄 Reiniciar la cámara cuando la pantalla es enfocada
+  useFocusEffect(
+    React.useCallback(() => {
+      setScanned(false) // Reiniciar escaneo
+      setCameraKey((prevKey) => prevKey + 1) // Forzar re-render
+    }, [])
+  )
+
   const handleBarCodeScanned = ({ data }) => {
+    if (scanned) return
     setScanned(true)
     try {
       const params = JSON.parse(data)
@@ -47,7 +56,9 @@ export default function App () {
 
   return (
     <View style={styles.container}>
+      {/* 🔄 Usa key para forzar re-render en iOS */}
       <CameraView
+        key={cameraKey}
         onBarcodeScanned={scanned ? undefined : handleBarCodeScanned}
         barcodeScannerSettings={{
           barcodeTypes: ['qr', 'pdf417']
@@ -55,10 +66,7 @@ export default function App () {
         style={StyleSheet.absoluteFillObject}
       >
         <View style={styles.topContainer}>
-          <TouchableOpacity
-            style={styles.backButton}
-            onPress={() => navigation.navigate('Home')}
-          >
+          <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('Home')}>
             <Ionicons name='arrow-back' size={24} color='white' />
           </TouchableOpacity>
         </View>
@@ -89,8 +97,8 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     padding: 20,
-    paddingTop: 50, // Lower the back button a bit
-    backgroundColor: 'rgba(0, 0, 0, 0.2)' // Add some background color to make it look more like the iPhone camera
+    paddingTop: 50,
+    backgroundColor: 'rgba(0, 0, 0, 0.2)'
   },
   backButton: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -102,7 +110,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: 'rgba(0, 0, 0, 0.2)' // Add some background color to make it look more like the iPhone camera
+    backgroundColor: 'rgba(0, 0, 0, 0.2)'
   },
   captureButton: {
     backgroundColor: 'rgba(255, 0, 0, 0.7)',
